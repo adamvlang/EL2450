@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.82"
+    ComputedModelVersion    "1.83"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       Dimension		      3
       Object {
 	$ObjectID		2
-	IsActive		[1]
+	IsActive		[0]
 	Location		[219.0, 52.0, 741.0, 661.0]
 	Object {
 	  $PropName		  "ModelBrowserInfo"
@@ -93,7 +93,7 @@ Model {
       }
       Object {
 	$ObjectID		10
-	IsActive		[0]
+	IsActive		[1]
 	Location		[1070.0, 0.0, 1100.0, 1390.0]
 	Object {
 	  $PropName		  "ModelBrowserInfo"
@@ -119,8 +119,8 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1044.0, 1155.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [0.0, 0.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [-18.266666666671483, -164.67203065134137]
 	}
       }
       PropName		      "WindowsInfo"
@@ -132,9 +132,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Gabriel"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jan 22 13:56:03 2016"
-  RTWModifiedTimeStamp	  375371754
-  ModelVersionFormat	  "1.%<AutoIncrement:82>"
+  LastModifiedDate	  "Fri Jan 22 14:59:07 2016"
+  RTWModifiedTimeStamp	  375372405
+  ModelVersionFormat	  "1.%<AutoIncrement:83>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -439,7 +439,7 @@ Model {
 	  SimStateInterfaceChecksumMismatchMsg "warning"
 	  SimStateOlderReleaseMsg "error"
 	  InitInArrayFormatMsg	  "warning"
-	  StrictBusMsg		  "None"
+	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  BlockIODiagnostic	  "none"
@@ -981,6 +981,17 @@ Model {
       BlockType		      Terminator
     }
     Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SaveFormat	      "Array"
+      Save2DSignal	      "Inherit from input (this choice will be removed - see release notes)"
+      FixptAsFi		      off
+      NumInputs		      "1"
+      SampleTime	      "0"
+    }
+    Block {
       BlockType		      TransferFcn
       Numerator		      "[1]"
       Denominator	      "[1 2 1]"
@@ -1003,9 +1014,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "48"
+    SIDHighWatermark	    "49"
     Block {
       BlockType		      TransferFcn
       Name		      "Continous controller"
@@ -1026,7 +1037,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Reference signal"
-	Location		[261, 153, 517, 464]
+	Location		[1070, 0, 2170, 1390]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1123,12 +1134,22 @@ Model {
       Position		      [535, 94, 565, 126]
       ZOrder		      -3
       Floating		      off
-      Location		      [430, 181, 754, 420]
+      Location		      [1, 60, 2161, 1379]
       Open		      off
       NumInputPorts	      "1"
       List {
 	ListType		AxesTitles
 	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
       }
       YMin		      "60.15"
       YMax		      "60.4"
@@ -1143,12 +1164,22 @@ Model {
       Position		      [535, 144, 565, 176]
       ZOrder		      -4
       Floating		      off
-      Location		      [376, 462, 867, 701]
+      Location		      [1, 60, 2143, 1379]
       Open		      off
       NumInputPorts	      "1"
       List {
 	ListType		AxesTitles
 	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		ScopeGraphics
+	FigureColor		"[0.5 0.5 0.5]"
+	AxesColor		"[0 0 0]"
+	AxesTickColor		"[1 1 1]"
+	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
+	LineStyles		"-|-|-|-|-|-"
+	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
+	MarkerStyles		"none|none|none|none|none|none"
       }
       TimeRange		      "40"
       YMin		      "59.425"
@@ -1157,6 +1188,20 @@ Model {
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
       SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      SID		      "49"
+      Ports		      [1]
+      Position		      [600, 225, 660, 255]
+      ZOrder		      2
+      VariableName	      "lowerTank_result"
+      MaxDataPoints	      "inf"
+      SaveFormat	      "Timeseries"
+      Save2DSignal	      "3-D array (concatenate along third dimension)"
+      FixptAsFi		      on
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      SubSystem
@@ -1807,9 +1852,18 @@ Model {
       }
       Branch {
 	ZOrder			4
-	Points			[0, 120; -380, 0]
-	DstBlock		"Sum"
-	DstPort			2
+	Points			[0, 80]
+	Branch {
+	  ZOrder		  11
+	  DstBlock		  "To Workspace"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  10
+	  Points		  [0, 40; -380, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
       }
     }
     Line {
