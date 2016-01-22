@@ -16,28 +16,32 @@ Gamma = alpha1^2/alpha2^2;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<<<<<<< HEAD
 s = tf('s');
-=======
->>>>>>> 297a200c483e97f4d9747f67a64e26e57d32a384
-upperNUM = K;
-upperDEN = 1 + Tau*s;
-lowerNUM = Gamma;
-lowerDEN = 1 + Gamma*Tau*s;
-<<<<<<< HEAD
+
+upperNUM = {[K]};
+upperDEN = {[Tau 1]};
+lowerNUM = {[Gamma]};
+lowerDEN = {[Gamma*Tau 1]};
 uppertank=tf([upperNUM],[upperDEN]); % Transfer function for upper tank
 lowertank=tf([lowerNUM],[lowerDEN]); % Transfer function for upper tank
-=======
+
 uppertank=tf(upperNUM,upperDEN); % Transfer function for upper tank
 lowertank=tf(lowerNUM,lowerDEN); % Transfer function for upper tank
->>>>>>> 297a200c483e97f4d9747f67a64e26e57d32a384
 G=uppertank*lowertank; % Transfer function from input to lower tank level
 G = lowertank; % for task 2
 
 % CalculatePID paramaeters
-
-F = tf(1); % Transfer function for the controller
-
+chi = 0.5;
+zeta = 0.7;
+omega0 = 0.1;
+[K, Ti, Td, N] = polePlacePID(chi, omega0, zeta,Tau,Gamma,K);
+C = K + K/(Ti*s) + (K*Td*N*s)/(s+N);
+F = C; % Transfer function for the controller
+sim('tanks')
+% plot(lowerTank_result.Time,lowerTank_result.Data)
+OpenLoop = F*G;
+[Gm,Pm,Wgm,Wpm] = margin(OpenLoop) ;
+disp(['Crossover Frequency : ' , num2str(Wpm)])
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.82"
+    ComputedModelVersion    "1.83"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -94,7 +94,7 @@ Model {
       Object {
 	$ObjectID		10
 	IsActive		[1]
-	Location		[-11.0, -11.0, 2182.0, 1402.0]
+	Location		[1070.0, 0.0, 1100.0, 1390.0]
 	Object {
 	  $PropName		  "ModelBrowserInfo"
 	  $ObjectID		  11
@@ -118,9 +118,9 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [2126.0, 1167.0]
-	  ZoomFactor		  [3.0]
-	  Offset		  [-7.8886657925759778, 4.6142148788628958]
+	  Extents		  [1044.0, 1155.0]
+	  ZoomFactor		  [1.25]
+	  Offset		  [-18.266666666671483, -164.67203065134137]
 	}
       }
       PropName		      "WindowsInfo"
@@ -132,9 +132,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Gabriel"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jan 20 14:44:56 2016"
-  RTWModifiedTimeStamp	  375201000
-  ModelVersionFormat	  "1.%<AutoIncrement:82>"
+  LastModifiedDate	  "Fri Jan 22 14:59:07 2016"
+  RTWModifiedTimeStamp	  375372405
+  ModelVersionFormat	  "1.%<AutoIncrement:83>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -981,6 +981,17 @@ Model {
       BlockType		      Terminator
     }
     Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SaveFormat	      "Array"
+      Save2DSignal	      "Inherit from input (this choice will be removed - see release notes)"
+      FixptAsFi		      off
+      NumInputs		      "1"
+      SampleTime	      "0"
+    }
+    Block {
       BlockType		      TransferFcn
       Numerator		      "[1]"
       Denominator	      "[1 2 1]"
@@ -991,7 +1002,7 @@ Model {
   }
   System {
     Name		    "tanks"
-    Location		    [-11, -11, 2171, 1391]
+    Location		    [1070, 0, 2170, 1390]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1003,80 +1014,18 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "300"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "50"
+    SIDHighWatermark	    "49"
     Block {
       BlockType		      TransferFcn
       Name		      "Continous controller"
       SID		      "48"
-      Position		      [205, 125, 285, 165]
+      Position		      [180, 125, 240, 165]
       ZOrder		      1
       NamePlacement	      "alternate"
       Numerator		      "F.num{1}"
       Denominator	      "F.den{1}"
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Input signal"
-      SID		      "49"
-      Ports		      [1]
-      Position		      [340, 49, 370, 81]
-      ZOrder		      2
-      Floating		      off
-      Location		      [430, 181, 754, 420]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-      }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.5 0.5 0.5]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
-      }
-      YMin		      "60.15"
-      YMax		      "60.4"
-      SaveName		      "ScopeData2"
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Ref signal1"
-      SID		      "50"
-      Ports		      [1]
-      Position		      [170, 34, 200, 66]
-      ZOrder		      3
-      Floating		      off
-      Location		      [1, 60, 2161, 1379]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-      }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.5 0.5 0.5]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
-      }
-      YMin		      "60.15"
-      YMax		      "60.4"
-      SaveName		      "ScopeData3"
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
     }
     Block {
       BlockType		      SubSystem
@@ -1088,7 +1037,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Reference signal"
-	Location		[-11, -11, 2171, 1391]
+	Location		[1070, 0, 2170, 1390]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1100,7 +1049,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"720"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Constant
 	  Name			  "Constant"
@@ -1215,7 +1164,7 @@ Model {
       Position		      [535, 144, 565, 176]
       ZOrder		      -4
       Floating		      off
-      Location		      [376, 462, 867, 701]
+      Location		      [1, 60, 2143, 1379]
       Open		      off
       NumInputPorts	      "1"
       List {
@@ -1239,6 +1188,20 @@ Model {
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off
       SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      SID		      "49"
+      Ports		      [1]
+      Position		      [600, 225, 660, 255]
+      ZOrder		      2
+      VariableName	      "lowerTank_result"
+      MaxDataPoints	      "inf"
+      SaveFormat	      "Timeseries"
+      Save2DSignal	      "3-D array (concatenate along third dimension)"
+      FixptAsFi		      on
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      SubSystem
@@ -1889,44 +1852,33 @@ Model {
       }
       Branch {
 	ZOrder			4
-	Points			[0, 120; -380, 0]
-	DstBlock		"Sum"
-	DstPort			2
+	Points			[0, 80]
+	Branch {
+	  ZOrder		  11
+	  DstBlock		  "To Workspace"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  10
+	  Points		  [0, 40; -380, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
       }
     }
     Line {
-      ZOrder		      10
+      ZOrder		      9
       SrcBlock		      "Continous controller"
       SrcPort		      1
-      Points		      [28, 0]
-      Branch {
-	ZOrder			12
-	Points			[0, -80]
-	DstBlock		"Input signal"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			11
-	DstBlock		"Two tanks"
-	DstPort			1
-      }
+      DstBlock		      "Two tanks"
+      DstPort		      1
     }
     Line {
       ZOrder		      6
       SrcBlock		      "Reference signal"
       SrcPort		      1
-      Points		      [11, 0]
-      Branch {
-	ZOrder			14
-	Points			[0, -95]
-	DstBlock		"Ref signal1"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			13
-	DstBlock		"Sum"
-	DstPort			1
-      }
+      DstBlock		      "Sum"
+      DstPort		      1
     }
     Line {
       ZOrder		      8
