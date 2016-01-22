@@ -12,17 +12,25 @@ g = 9.82;
 Tau = 1/alpha1*sqrt(2*tank_h10/g);
 K = 60*beta*Tau;
 Gamma = alpha1^2/alpha2^2;
-
+%TOOOYOOTOTOTO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<<<<<<< HEAD
 s = tf('s');
+=======
+>>>>>>> 297a200c483e97f4d9747f67a64e26e57d32a384
 upperNUM = K;
 upperDEN = 1 + Tau*s;
 lowerNUM = Gamma;
 lowerDEN = 1 + Gamma*Tau*s;
+<<<<<<< HEAD
 uppertank=tf([upperNUM],[upperDEN]); % Transfer function for upper tank
 lowertank=tf([lowerNUM],[lowerDEN]); % Transfer function for upper tank
+=======
+uppertank=tf(upperNUM,upperDEN); % Transfer function for upper tank
+lowertank=tf(lowerNUM,lowerDEN); % Transfer function for upper tank
+>>>>>>> 297a200c483e97f4d9747f67a64e26e57d32a384
 G=uppertank*lowertank; % Transfer function from input to lower tank level
 G = lowertank; % for task 2
 
