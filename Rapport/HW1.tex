@@ -43,14 +43,25 @@
 
   \subsection{5}
   \begin{center}
-    \begin{tabular}{c | c | c | c | c | c}
+    \begin{tabular}{|c | c | c | c | c | c |}
       \hline
       $\zeta$ & $\chi$ & $\omega_0$ & $T_r$ & $M$ & $T_{settling}$ \\
-      0.5 & 0.7 & 0.1 & 0 & 0 & 0 \\ \hline
-      0.5 & 0.7 & 0.2 & 0 & 0 & 0 \\ \hline
-      0.5 & 0.8 & 0.2 & 0 & 0 & 0 \\
+      \hline
+      0.5 & 0.7 & 0.1 & 8.4 & 14.0 & 45,4 \\ 
+      0.5 & 0.7 & 0.2 & 4.9 & 26.9 & 37.0 \\ 
+      0.5 & 0.8 & 0.2 & 5.0 & 31.7 & 26.5 \\ \hline
     \end{tabular}
   \end{center}
+  The last control parameters will give values that is within the
+  requirements. Therefore will this be the best controller for us. 
+
+  \subsection{6}
+  The crossover frequency for the open loop system, $F(s)G(s)$ can be
+  found by solving for $0dB$ when $s=j\omega$,
+  \begin{equation}
+    |F(j\omega)G(j\omega)|=1
+  \end{equation}
+  This will give the crossover frequency $\omega_c=0.916\:rad/s$.
 
 
 
