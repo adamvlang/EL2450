@@ -37,7 +37,11 @@ omega0 = 0.1;
 [K, Ti, Td, N] = polePlacePID(chi, omega0, zeta,Tau,Gamma,K);
 C = K + K/(Ti*s) + (K*Td*N*s)/(s+N);
 F = C; % Transfer function for the controller
-
+sim('tanks')
+% plot(lowerTank_result.Time,lowerTank_result.Data)
+OpenLoop = F*G;
+[Gm,Pm,Wgm,Wpm] = margin(OpenLoop) ;
+disp(['Crossover Frequency : ' , num2str(Wpm)])
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
