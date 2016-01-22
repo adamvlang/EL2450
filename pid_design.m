@@ -16,9 +16,15 @@ Gamma = alpha1^2/alpha2^2;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-uppertank=tf([1],[1]); % Transfer function for upper tank
-lowertank=tf([1],[1]); % Transfer function for upper tank
+s = tf('s');
+upperNUM = K;
+upperDEN = 1 + Tau*s;
+lowerNUM = Gamma;
+lowerDEN = 1 + Gamma*Tau*s;
+uppertank=tf([upperNUM],[upperDEN]); % Transfer function for upper tank
+lowertank=tf([lowerNUM],[lowerDEN]); % Transfer function for upper tank
 G=uppertank*lowertank; % Transfer function from input to lower tank level
+G = lowertank; % for task 2
 
 % CalculatePID paramaeters
 

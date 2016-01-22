@@ -1,0 +1,57 @@
+% vim:tw=72 sw=2 ft=tex
+%         File: HW1.tex
+% Date Created: 2016 Jan 20
+%  Last Change: 2016 Jan 22
+%     Compiler: pdflatex
+%       Author: Adam Lang & Gabriel Andersson Santiago
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+\title{Homework assignment 1 - EL2450}
+\author{Adam Lang & Gabriel Andersson Santiago}
+
+\begin{document}
+\maketitle
+
+\section{Exercise 1}
+  
+  \subsection{1}
+  This is the tap that connects the upper tank to the water reservoir.
+  If the gain is set to 0, this means that there is no contribution from
+  this when the upper tank is being emptied, i.e. the tap is closed.
+  
+  \subsection{2}
+  The transfer functions was implemented in the presented code.
+  
+  \subsection{3}
+  \textbf{The step block}, the initial value for the step block is set to 
+  0 meaning that the step will start with this value. The step time is
+  set to 100 meaning that the step will come at $t=100$ and the final
+  value is set to 10 meaning that the step will step from 0 to 10.\\
+  \textbf{The constant block}, this will give a constant output of 40.\\
+  \textbf{The summation block}, this will add together both the step-
+  and constant block and the output will be the sum of these to. The
+  reference block will therefore at time 100 have a step from 40 to 50.
+  
+  \subsection{4}
+  The function and the transfer function was added to the script.
+
+  \subsection{5}
+  \begin{center}
+    \begin{tabular}{c | c | c | c | c | c}
+      \hline
+      $\zeta$ & $\chi$ & $\omega_0$ & $T_r$ & $M$ & $T_{settling}$ \\
+      0.5 & 0.7 & 0.1 & 0 & 0 & 0 \\ \hline
+      0.5 & 0.7 & 0.2 & 0 & 0 & 0 \\ \hline
+      0.5 & 0.8 & 0.2 & 0 & 0 & 0 \\
+    \end{tabular}
+  \end{center}
+
+
+
+\end{document}
