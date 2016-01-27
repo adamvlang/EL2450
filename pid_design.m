@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initialization
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clear  
+close all, clear all, clc  
 init_tanks;
 g = 9.82;
 Tau = 1/alpha1*sqrt(2*tank_h10/g);
@@ -28,12 +28,11 @@ lowertank=tf([lowerNUM],[lowerDEN]); % Transfer function for upper tank
 uppertank=tf(upperNUM,upperDEN); % Transfer function for upper tank
 lowertank=tf(lowerNUM,lowerDEN); % Transfer function for upper tank
 G=uppertank*lowertank; % Transfer function from input to lower tank level
-G = lowertank; % for task 2
 
 % CalculatePID paramaeters
 chi = 0.5;
-zeta = 0.7;
-omega0 = 0.1;
+zeta = 0.8;
+omega0 = 0.2;
 [K, Ti, Td, N] = polePlacePID(chi, omega0, zeta,Tau,Gamma,K);
 C = K + K/(Ti*s) + (K*Td*N*s)/(s+N);
 F = C; % Transfer function for the controller
