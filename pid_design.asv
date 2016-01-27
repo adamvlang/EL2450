@@ -46,17 +46,14 @@ disp(['Crossover Frequency : ' , num2str(Wpm)])
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Ts = 1; % Sampling time
-
-% samplingTimes = [1,2,4,8,6];
-% for i = 1:length(samplingTimes)
-%     Ts = samplingTimes(i);
-%     sim('tanks')
-%     figure
-%     plot(lowerTank_result.Time,lowerTank_result.Data)
-%     title(['Zero-Order Hold Sampling time: ',num2str(Ts)])
-% %     print(['ZeroOrder_Sampling_',num2str(Ts)],'-dpng')
-% end
-
+samplingTimes = [1,2,4,8,16];
+for i = 1:length(samplingTimes)
+    Ts = samplingTimes(i);
+    sim('tanks')
+    figure
+    plot(lowerTank_result.Time,lowerTank_result.Data)
+    title('
+end
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
 
