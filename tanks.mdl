@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.85"
+    ComputedModelVersion    "1.86"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,8 +54,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[924.0, 872.0]
-	ZoomFactor		[1.25]
-	Offset			[-147.28477731069597, -162.480254259128]
+	ZoomFactor		[1.0]
+	Offset			[-167.08477731069604, -179.48025425912761]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Gabriel"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jan 27 17:09:05 2016"
-  RTWModifiedTimeStamp	  375815342
-  ModelVersionFormat	  "1.%<AutoIncrement:85>"
+  LastModifiedDate	  "Wed Jan 27 17:36:51 2016"
+  RTWModifiedTimeStamp	  375816719
+  ModelVersionFormat	  "1.%<AutoIncrement:86>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -752,6 +752,41 @@ Model {
       PreserveConstantTs      off
     }
     Block {
+      BlockType		      DiscreteTransferFcn
+      NumeratorSource	      "Dialog"
+      Numerator		      "[1]"
+      DenominatorSource	      "Dialog"
+      Denominator	      "[1 0.5]"
+      InitialStatesSource     "Dialog"
+      InitialStates	      "0"
+      InputProcessing	      "Elements as channels (sample based)"
+      ExternalReset	      "None"
+      InitialDenominatorStates "0"
+      FilterStructure	      "Direct form II"
+      SampleTime	      "-1"
+      a0EqualsOne	      off
+      NumCoefMin	      "[]"
+      NumCoefMax	      "[]"
+      DenCoefMin	      "[]"
+      DenCoefMax	      "[]"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      StateDataTypeStr	      "Inherit: Same as input"
+      MultiplicandDataTypeStr "Inherit: Same as input"
+      NumCoefDataTypeStr      "Inherit: Inherit via internal rule"
+      DenCoefDataTypeStr      "Inherit: Inherit via internal rule"
+      NumProductDataTypeStr   "Inherit: Inherit via internal rule"
+      DenProductDataTypeStr   "Inherit: Inherit via internal rule"
+      NumAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      DenAccumDataTypeStr     "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
       BlockType		      Fcn
       Expr		      "sin(u[1])"
       SampleTime	      "-1"
@@ -806,6 +841,12 @@ Model {
       IgnoreLimit	      off
       ZeroCross		      on
       ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      ManualSwitch
+      CurrentSetting	      "1"
+      varsize		      off
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      Outport
@@ -942,9 +983,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "125"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "50"
+    SIDHighWatermark	    "53"
     Block {
       BlockType		      TransferFcn
       Name		      "Continous controller"
@@ -954,6 +995,19 @@ Model {
       NamePlacement	      "alternate"
       Numerator		      "F.num{1}"
       Denominator	      "F.den{1}"
+    }
+    Block {
+      BlockType		      DiscreteTransferFcn
+      Name		      "Discrete designed\ncontroller"
+      SID		      "53"
+      Ports		      [1, 1]
+      Position		      [10, 45, 70, 85]
+      ZOrder		      6
+      NamePlacement	      "alternate"
+      InputPortMap	      "u0"
+      Numerator		      "Fd.num{1}"
+      Denominator	      "Fd.den{1}"
+      SampleTime	      "Ts"
     }
     Block {
       BlockType		      SubSystem
@@ -1056,6 +1110,13 @@ Model {
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
     }
     Block {
+      BlockType		      ManualSwitch
+      Name		      "Switch"
+      SID		      "52"
+      Position		      [215, 127, 245, 163]
+      ZOrder		      5
+    }
+    Block {
       BlockType		      Scope
       Name		      "Tank1 level"
       SID		      "7"
@@ -1095,8 +1156,13 @@ Model {
       "9 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache"
       "',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'TimeRan"
       "geSamples','40','TimeRangeFrames','40'),extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'"
-      "PreviousZoomMode','ZoomOut'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version','201"
-      "5b','Location',[1 76 1921 1039])"
+      "PreviousZoomMode','ZoomOut'),extmgr.Configuration('Tools','Measurements',true,'Measurements',struct('triggers',s"
+      "truct('Mode','Auto','Position',0.5,'Type','Edge','Polarity','Positive','AutoLevel',true,'Level',0,'Hysteresis',0"
+      ",'UpperLevel',2.3,'LowerLevel',0.2,'MinTime',0,'MaxTime',Inf,'Timeout',0,'Delay',0,'Holdoff',0,'SourceOffset',1,"
+      "'MainPanelOpen',1,'TypePanelOpen',1,'SettingsPanelOpen',1,'OffsetPanelOpen',1),'tcursors',struct('XCoordinates',"
+      "[10 30],'YCoordinates',[NaN NaN],'CursorChannels',[1 1],'WaveformCursors',true,'ShowHorizontal',false,'ShowVerti"
+      "cal',true,'LockCursorSpacing',false,'SnapToData',false,'SettingsPanelOpen',0,'MeasurementsPanelOpen',1)),'Versio"
+      "n','2015b')),'Version','2015b','Location',[1 76 1921 1039])"
     }
     Block {
       BlockType		      ToWorkspace
@@ -1123,7 +1189,7 @@ Model {
       Variant		      off
       System {
 	Name			"Two tanks"
-	Location		[953, 0, 1927, 1047]
+	Location		[-7, 0, 967, 1047]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1190,7 +1256,7 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Tank 1"
-	    Location		    [953, 0, 1927, 1047]
+	    Location		    [-7, 0, 967, 1047]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1748,7 +1814,7 @@ Model {
       BlockType		      ZeroOrderHold
       Name		      "Zero-Order\nHold"
       SID		      "50"
-      Position		      [150, 130, 185, 160]
+      Position		      [25, 185, 60, 215]
       ZOrder		      3
       SampleTime	      "Ts"
     }
@@ -1787,9 +1853,10 @@ Model {
       }
     }
     Line {
-      ZOrder		      20
+      ZOrder		      30
       SrcBlock		      "Continous controller"
       SrcPort		      1
+      Points		      [9, 0; 0, 35; -73, 0; 0, 20]
       DstBlock		      "Zero-Order\nHold"
       DstPort		      1
     }
@@ -1801,15 +1868,41 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      8
+      ZOrder		      31
+      SrcBlock		      "Zero-Order\nHold"
+      SrcPort		      1
+      Points		      [48, 0; 0, -45]
+      DstBlock		      "Switch"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      23
       SrcBlock		      "Sum"
       SrcPort		      1
-      DstBlock		      "Continous controller"
+      Points		      [0, 0]
+      Branch {
+	ZOrder			33
+	Points			[0, -80]
+	DstBlock		"Discrete designed\ncontroller"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			26
+	DstBlock		"Continous controller"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      34
+      SrcBlock		      "Discrete designed\ncontroller"
+      SrcPort		      1
+      Points		      [51, 0; 0, 70]
+      DstBlock		      "Switch"
       DstPort		      1
     }
     Line {
-      ZOrder		      21
-      SrcBlock		      "Zero-Order\nHold"
+      ZOrder		      32
+      SrcBlock		      "Switch"
       SrcPort		      1
       DstBlock		      "Two tanks"
       DstPort		      1
