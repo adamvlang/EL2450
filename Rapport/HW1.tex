@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: HW1.tex
 % Date Created: 2016 Jan 20
-%  Last Change: 2016 Jan 29
+%  Last Change: 2016 Feb 02
 %     Compiler: pdflatex
 %       Author: Adam Lang & Gabriel Andersson Santiago
 
@@ -11,6 +11,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{graphicx}
+\usepackage{gensymb}
 
 \graphicspath{{pics/}}
 
@@ -47,12 +48,12 @@
   \textbf{The constant block}, this will give a constant output of 40.\\
   \textbf{The summation block}, this will add together both the step-
   and constant block and the output will be the sum of these to. The
-  reference block will therefore at time 100 have a step from 40 to 50.
-  
+  reference block will therefore at time 100 have a step from 40 to 50
+
   \subsection{}%4
   The function and the transfer function was added to the script.
 
-  11612-09598-96694-07801-02589\subsection{}%5
+  \subsection{}%5
   \begin{center}
     \begin{tabular}{|c | c | c | c | c | c |}
       \hline
@@ -96,6 +97,15 @@
   and the settling time for the discrete controller is much worse.
 
   \subsection{}%9
+  If we allow a phase deterioration of $20\degree$ we can calculate the
+  sampling frequency as 
+  \begin{equation}
+    \omega_s\approx \frac{2\pi\omega_{cutoff}}{0.35},
+  \end{equation}
+  which gives us the sampling time as,
+  \begin{equation}
+    T=\frac{2\pi}{\omega_s}=0.1539
+  \end{equation}
 
 
 \end{document}
