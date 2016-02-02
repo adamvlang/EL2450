@@ -13,22 +13,14 @@ Tau = 1/alpha1*sqrt(2*tank_h10/g);
 K = 60*beta*Tau;
 Gamma = alpha1^2/alpha2^2;
 
-%TOOOYOOTOTOTO
 Ts = 1;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 s = tf('s');
 
-upperNUM = {[K]};
-upperDEN = {[Tau 1]};
-lowerNUM = {[Gamma]};
-lowerDEN = {[Gamma*Tau 1]};
-uppertank=tf([upperNUM],[upperDEN]); % Transfer function for upper tank
-lowertank=tf([lowerNUM],[lowerDEN]); % Transfer function for upper tank
-
-uppertank=tf(upperNUM,upperDEN); % Transfer function for upper tank
-lowertank=tf(lowerNUM,lowerDEN); % Transfer function for upper tank
+uppertank=tf([K],[Tau 1]); % Transfer function for upper tank
+lowertank=tf([Gamma],[Gamma*Tau 1]); % Transfer function for upper tank
 G=uppertank*lowertank; % Transfer function from input to lower tank level
 
 % CalculatePID paramaeters
@@ -36,13 +28,15 @@ chi = 0.5;
 zeta = 0.8;
 omega0 = 0.2;
 [K, Ti, Td, N] = polePlacePID(chi, omega0, zeta,Tau,Gamma,K);
-C = K + K/(Ti*s) + (K*Td*N*s)/(s+N);
-F = C; % Transfer function for the controller
+F = K + K/(Ti*s) + (K*Td*N*s)/(s+N); % Transfer function for the controller
 
 OpenLoop = F*G;
+Gc = (F*G)/(1+F*G);
 [Gm,Pm,Wgm,Wpm] = margin(OpenLoop) ;
 disp(['Crossover Frequency : ' , num2str(Wpm)])
-samplingtime =  1/((2*pi)/(0.35/Wpm))
+samplingtime =  1/ ((2*pi)/(0.35/Wpm));
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -53,32 +47,34 @@ samplingTimes = [1,2,4,8,16];
 for i = 0.25:0.01:0.3
     Ts = i;
     Ff = c2d(F,Ts,'zoh');    
-    sim('tanks')
-    figure
-    plot(LR_zero.Time,LR_zero.Data,'b')
-    hold on
-    plot(LR_con.Time,LR_con.Data,'r')
-    hold on
-    plot([130 130], [35 55],'--k') %settling time limit
-    hold on
-    plot([0,200],[53.5,53.5],'--k')
-    hold on
-    plot([0,200],[49.8,49.8],'--c')
-    hold on
-    plot([0,200],[50.2,50.2],'--c')
-    xlabel('Time [s]'); ylabel('Water level [cm]')
-    legend('Discrete Controller','Continous')
-    title(['Discrete Controller and continuos Controller Sampling time: ',num2str(Ts)])
+%     sim('tanks')
+%     figure
+%     plot(LR_zero.Time,LR_zero.Data,'b')
+%     hold on
+%     plot(LR_con.Time,LR_con.Data,'r')
+%     hold on
+%     plot([130 130], [35 55],'--k') %settling time limit
+%     hold on
+%     plot([0,200],[53.5,53.5],'--k')
+%     hold on
+%     plot([0,200],[49.8,49.8],'--c')
+%     hold on
+%     plot([0,200],[50.2,50.2],'--c')
+%     xlabel('Time [s]'); ylabel('Water level [cm]')
+%     legend('Discrete Controller','Continous')
+%     title(['Discrete Controller and continuos Controller Sampling time: ',num2str(Ts)])
 %     print(['zero_dis_comp_sample_',num2str(Ts)],'-dpng')
 end
-Ff = c2d(F,Ts,'zoh'); % Transfer function for discrete designed controller
- sim('tanks')
- plot(LR_con.Time,LR_con.Data,'b')
- hold on
- plot(LR_zero.Time,LR_zero.Data,'r')
- xlabel('Time [s]'); ylabel('Water level [cm]')
- legend('Continous','Zero-order hold')
- title('Continous Controller and hold zero sampling 1')
+% Ts = samplingtime
+%  F_d = c2d(F,Ts,'zoh'); % Transfer function for discrete designed controller
+ 
+%  sim('tanks')
+%   plot(LR_con.Time,LR_con.Data,'b')
+%   hold on
+%   plot(LR_zero.Time,LR_zero.Data,'r')
+%   xlabel('Time [s]'); ylabel('Water level [cm]')
+%   legend('Continous','Zero-order hold')
+%   title('Continous Controller and hold zero sampling 1')
 
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
@@ -87,7 +83,39 @@ Ff = c2d(F,Ts,'zoh'); % Transfer function for discrete designed controller
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %To discretize the continous controller use c2d(Controller,Ts,'zoh')
+% TASK 11
+Ts = 4;
+F_d = c2d(F,Ts,'zoh');
+% sim('tanks');
+% plot(LR_disc.Time,LR_disc.Data)
+%title('Performance Closed loop from Q8 with Ts=4')
 
+% TASK 12
+
+Ts = 4;
+Fd = F_d;
+Gd = c2d(G,Ts,'zoh');
+Gd_closed = (Fd*Gd)/(1+Fd*Gd);
+disp('Task 11: Coefficients for Gd')
+for i = 1:length(Gd.num{1}) 
+        disp(['a',num2str(i),' = ', num2str(Gd.num{1}(i))])
+
+end
+for i = 1:length(Gd.den{1})
+        disp(['b',num2str(i),' = ', num2str(Gd.den{1}(i))])
+ 
+end
+
+% TASK 13
+% Inside the unit circle
+
+% TASK 14
+
+polesG = pole(Gc);  % Poles for Continous
+polesGd = exp(Ts*polesG); % Calculated poles for Discrete 
+
+% z^4+d0*z^3+d1*z^2+d3
+% A = [1 d0 d1 d3]
 
 % Gd = 1; % Sampled system model
 % Fd = 1; % Transfer function for discrete designed controller
