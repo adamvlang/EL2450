@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: HW1.tex
 % Date Created: 2016 Jan 20
-%  Last Change: 2016 Jan 22
+%  Last Change: 2016 Jan 29
 %     Compiler: pdflatex
 %       Author: Adam Lang & Gabriel Andersson Santiago
 
@@ -12,23 +12,34 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 
+\graphicspath{{pics/}}
+
 \title{Homework assignment 1 - EL2450}
 \author{Adam Lang & Gabriel Andersson Santiago}
 
+\newcommand{\fig}[4]{
+    \begin{figure}[!h]
+      \centering
+      \includegraphics[scale=#1]{#2}
+        \label{fig:#3}
+        \caption{#4}
+    \end{figure}
+}
 \begin{document}
+
 \maketitle
 
 \section{Exercise 1}
   
-  \subsection{1}
+  \subsection{}%1
   This is the tap that connects the upper tank to the water reservoir.
   If the gain is set to 0, this means that there is no contribution from
   this when the upper tank is being emptied, i.e. the tap is closed.
   
-  \subsection{2}
+  \subsection{}%2
   The transfer functions was implemented in the presented code.
   
-  \subsection{3}
+  \subsection{}%3
   \textbf{The step block}, the initial value for the step block is set to 
   0 meaning that the step will start with this value. The step time is
   set to 100 meaning that the step will come at $t=100$ and the final
@@ -38,10 +49,10 @@
   and constant block and the output will be the sum of these to. The
   reference block will therefore at time 100 have a step from 40 to 50.
   
-  \subsection{4}
+  \subsection{}%4
   The function and the transfer function was added to the script.
 
-  \subsection{5}
+  11612-09598-96694-07801-02589\subsection{}%5
   \begin{center}
     \begin{tabular}{|c | c | c | c | c | c |}
       \hline
@@ -55,14 +66,36 @@
   The last control parameters will give values that is within the
   requirements. Therefore will this be the best controller for us. 
 
-  \subsection{6}
+  \subsection{}%6
   The crossover frequency for the open loop system, $F(s)G(s)$ can be
-  found by solving for $0dB$ when $s=j\omega$,
+  found by solving for $0dB$ when $s=j\omega$
   \begin{equation}
     |F(j\omega)G(j\omega)|=1
   \end{equation}
   This will give the crossover frequency $\omega_c=0.362\:rad/s$.
 
+  \subsection{}%7
+
+  \fig{0.4}{con_zero_compare.png}{cont_zero_step}{Step response
+  from the continuous controller and the ZOH}
+  As seen in figure \ref{fig:cont_zero_step}, the system with the zero
+  order hold is a bit quicker although there is more overshoot.
+
+  \subsection{}%8
+
+  \fig{0.4}{zero_dis_comp_sample_1.png}{zoh_dis_comp_s1}{Step response
+  for ZOH compared to discrete controller with sample time 1}
+  When comparing the ZOH to the discrete controller with step size 1, will the ZOH give a
+  quicker system with more overshoot. The discrete controller will have
+  significantly longer settling time.\\
+
+  \fig{0.4}{zero_dis_comp_sample_2.png}{zoh_dis_comp_s2}{Step response
+  for ZOH compared to discrete controller with sample time 2}
+  When the sample size is increased to 2, there will be even larger
+  differences, the overshoot from the zero order hold will increase some
+  and the settling time for the discrete controller is much worse.
+
+  \subsection{}%9
 
 
 \end{document}
