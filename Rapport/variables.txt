@@ -1,0 +1,9 @@
+#textfile to open : textfile = name of file WITH extension
+textfile = HW1.tex
+#Variable definition: 
+prefix = var
+#Variables:  Variable = Value. The value can only be 1 word.
+d2 = -1.206
+d3 = 0.549
+d4 = -0.092
+d5 = 0.005
