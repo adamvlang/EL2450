@@ -129,10 +129,10 @@ The poles needs to be inside the unit circle for the system to be stable.
 \subsection{}%14
 The pole polynomial is
 	\begin{equation}
-		z^4+d0*z^3+d1*z^2+d2*z +d3
+		z^4+d_0z^3+d_1z^2+d_2z +d_3
 	\end{equation}
 	with the following values
-\being{center}
+\begin{center}
 	\begin{tabular}{| c | c | c | c |}
 	\hline
 	$d_0$ & $d_1$ & $d_2$ & $d_3$ \\
@@ -145,39 +145,95 @@ The pole polynomial is
 \subsection{} %14
 We have the following closed loop system
 \begin{equation}
-	Gc(s) = \frac{$F_d$*$G_d$}{1+$F_d$*$G_d$
+	Gc(s) = \frac{F_dG_d}{1+F_dG_d}
 \end{equation}
 which can be rewritten to
 \begin{equation}
-	Gc(s) = \frac{$F_num$*$G_num$}{$F_den$*$G_den$+$F_num$*$G_num$}
+	Gc(s) = \frac{F_{num}*G_{num}}{F_{den}*G_{den}+F_{num}*G_{num}}
 \end{equation}
 The equation for the poles in the closed loop system is therefore
 \begin{equation}
-	$F_den$*$G_den$+$F_num$*$G_num$ = 0
+	F_{den}*G_{den}+F_{num}*G_{num} = 0
 \end{equation}
-	Replacing the terms in the equation with its corresponding polynomial and setting this equal
-	to the pole polynomial of the discrete-time closed loop system we get
+
+Replacing the terms in the equation with its corresponding polynomial and setting this equal
+to the pole polynomial of the discrete-time closed loop system we get
 \begin{equation}
-	$(z-1)(z+r)(z^2+b_1*z+b_2)+(c_0*z^2+c_1*z+c_2)(a_1*z+a_2) = z^4+d_0*z^3+d_1*z^2+d_2*z+d_3$
+	(z-1)(z+r)(z^2+b_1z+b_2)+(c_0z^2+c_1z+c_2)(a_1z+a_2) = z^4+d_0z^3+d_1z^2+d_2z+d_3
 \end{equation}
 By expanding the left side of the equation following polynomial is derived
 \begin{equation}
-	$z^4+z^3(a_1*c_0+b_1+r-1)+z^2(a_1*c_1+a_2*c_0+b_1*r+b_2-b_1-r)+z(a_1+c_2+a_2*c_1+b_2*r-b_1*r-b_2)
-	+a_2*c_2-b_2*r$
+	z^4+z^3(a_1 c_0+b_1+r-1)+z^2(a_1 c_1+a_2 c_0+b_1 r+b_2-b_1-r)+z(a_1+c_2+a_2 c_1+b_2 r-b_1 r-b_2)
+	+a_2 c_2-b_2r
 \end{equation}
 
-This gives the corresponding expression for the right sides $d_i$ values
+This gives the corresponding expression for the right side's $d_i$ values
 
 \begin{center}
 	\begin{tabular}{| c | c | c | c |}
 	\hline
 	$d_0$ & $d_1$ & $d_2$ & $d_3$ \\
 	\hline
-	$a_1*c_0+b_1+r-1$ & $a_1*c_1+a_2*c_0+b_1*r+b_2-b_1-r$ & $a_1+c_2+a_2*c_1+b_2*r-b_1*r-b_2$ & $a_2*c_2-b_2*r$ \\
+	$a_1 c_0+b_1+r-1$ & $a_1 c_1+a_2 c_0+b_1 r+b_2-b_1-r$ & $a_1+c_2+a_2 c_1+b_2 r-b_1 r-b_2$ & $a_2 c_2-b_2 r$ \\
 	\hline
 	\end{tabular}
 \end{center}
-	
+Which can be represented in matrix form.
 
+\begin{equation}
+	\begin{bmatrix}
+		1 & a_1 & 0 & 0 \\
+		b_1-1 & a2 & a1 & 0 \\
+		b_2-b_1 & 0 & a_2 & a_1 \\
+		-b_2 & 0 & 0 & a_2 \\
 
+	\end{bmatrix}
+	\begin{bmatrix}
+	r\\
+	c_0\\
+	c_1\\
+	c_2\\
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	d_0-b_1+1\\
+	d_1-b_2+b_1\\
+	d_2+b_2\\
+	d_3\\
+	\end{bmatrix}
+\end{equation}
+
+\subsection{}%16
+By using the solver command in Matlab the values for $r, c_0, c_1$ and $c_2$ could be calculated.
+
+\begin{center}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	r & $c_0$ & $c_1$ & $c_2$ \\
+	\hline
+	0.4543 & 8.6154 & -10.3654 & 3.2973 \\
+	\hline
+	\end{tabular}
+\end{center}
+
+The poles of the closed loop system are
+\begin{center}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	$p_1$ & $p_2$ & $p_3$ & $p_4$ \\
+	\hline
+	0.1353 & 0.1353 & 0.4677+0.2453i & 0.46677-0.2435i\\
+	\hline
+	\end{tabular}
+\end{center}
+which is the same as in Question 11.
+
+\subsection{}%17
+Insert compare picture.
+
+\subsection{}%18
+An input difference of 0-100 with a 10-bit A/D converter gives a quantization level of
+\begin{equation}
+	\frac{100}{2^{10}} = 0.0977
+\end{equation}
 \end{document}
