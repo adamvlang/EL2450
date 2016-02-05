@@ -12,8 +12,11 @@ g = 9.82;
 Tau = 1/alpha1*sqrt(2*tank_h10/g);
 K = 60*beta*Tau;
 Gamma = alpha1^2/alpha2^2;
-
 Ts = 1;
+Q_int = 100/(2^6);
+Sat_upper = 100;
+Sat_lower = -100;
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,11 +125,58 @@ for i = 1:5
         disp(['d',num2str(i),' = ', num2str(Gc_polynomial(i))])
 end
 
-% TASK 15
-Fd = (c_0*z^2+c_1*z+c_2)/((z-1)(z+r));
-Gd = (a_1*z+a_2)/(Z^2+b_1*z+b_2);
+% TASK 16
 
+a1 = Gd.num{1}(2); a2 = Gd.num{1}(3);
+b1 = Gd.den{1}(2); b2 = Gd.den{1}(3);
+d0 = Gc_polynomial(2); d1 = Gc_polynomial(3); d2 = Gc_polynomial(4);
+d3 = Gc_polynomial(5);
 
+syms r c0 c1 c2
+
+A = [1 a1 0 0; b1-1 a2 a1 0;b2-b1 0 a2 a1;-b2 0 0 a2];
+B = [d0 - b1 + 1 ; d1 - b2 + b1 ; d2 + b2 ; d3];
+
+C = A\B;
+
+r = C(1);
+c0 = C(2);
+c1 = C(3);
+c2 = C(4);
+
+Fd = filt([c0 c1 c2], [1 r-1 -r], Ts);
+
+Gdc = Gd*Fd/(1+Gd*Fd);
+Gdc_minreal = minreal(Gdc);
+Gdc_poles = pole(Gdc_minreal)
+
+%TASK 17
+
+sim('tanks')
+
+plot(LR17)
+hold on
+plot(LR_disc, 'k')
+title('Comparison between c2d discretized and pole placed controller')
+legend('Discrete pole placed controller', 'Discrete controller with c2d')
+xlabel('Time')
+ylabel('Tank level')
+
+%TASK 19
+j=1;
+figure
+color = ['b' 'r' 'k' 'c' 'g'];
+for i = 10:-1:6
+    Q_int = 100/(2^i);
+    plot(LRQ, color(j))
+    hold on
+    sim('tanks')
+    j = j + 1;
+end
+title('Level of second tank with different quantization levels')
+legend('6 bits', '7 bits', '8 bits', '9 bits', '10 bit')
+xlabel('Time')
+ylabel('Tank level')
 
 % z^4+d0*z^3+d1*z^2+d3
 % A = [1 d0 d1 d3]
