@@ -118,7 +118,7 @@ The coefficients for the discrete systems are the following:
 	\hline
 	$a_1$ & $a_2$ & $b_1$ & $b_2$ \\
 	\hline
-	0.092 & 0.074 & -1.445 & 0.525 \\
+	0.0916 & 0.0739 & -1.4497 & 0.5254 \\
 	\hline
 	\end{tabular}
 \end{center}
@@ -129,8 +129,55 @@ The poles needs to be inside the unit circle for the system to be stable.
 \subsection{}%14
 The pole polynomial is
 	\begin{equation}
-		z^4+d1*z^3+d1*z^2+d2*z +d3
+		z^4+d0*z^3+d1*z^2+d2*z +d3
 	\end{equation}
+	with the following values
+\being{center}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	$d_0$ & $d_1$ & $d_2$ & $d_3$ \\
+	\hline
+	-1.2061 & 0.5495 & -0-0924 & 0-0051 \\
+	\hline
+	\end{tabular}
+\end{center}
+
+\subsection{} %14
+We have the following closed loop system
+\begin{equation}
+	Gc(s) = \frac{$F_d$*$G_d$}{1+$F_d$*$G_d$
+\end{equation}
+which can be rewritten to
+\begin{equation}
+	Gc(s) = \frac{$F_num$*$G_num$}{$F_den$*$G_den$+$F_num$*$G_num$}
+\end{equation}
+The equation for the poles in the closed loop system is therefore
+\begin{equation}
+	$F_den$*$G_den$+$F_num$*$G_num$ = 0
+\end{equation}
+	Replacing the terms in the equation with its corresponding polynomial and setting this equal
+	to the pole polynomial of the discrete-time closed loop system we get
+\begin{equation}
+	$(z-1)(z+r)(z^2+b_1*z+b_2)+(c_0*z^2+c_1*z+c_2)(a_1*z+a_2) = z^4+d_0*z^3+d_1*z^2+d_2*z+d_3$
+\end{equation}
+By expanding the left side of the equation following polynomial is derived
+\begin{equation}
+	$z^4+z^3(a_1*c_0+b_1+r-1)+z^2(a_1*c_1+a_2*c_0+b_1*r+b_2-b_1-r)+z(a_1+c_2+a_2*c_1+b_2*r-b_1*r-b_2)
+	+a_2*c_2-b_2*r$
+\end{equation}
+
+This gives the corresponding expression for the right sides $d_i$ values
+
+\begin{center}
+	\begin{tabular}{| c | c | c | c |}
+	\hline
+	$d_0$ & $d_1$ & $d_2$ & $d_3$ \\
+	\hline
+	$a_1*c_0+b_1+r-1$ & $a_1*c_1+a_2*c_0+b_1*r+b_2-b_1-r$ & $a_1+c_2+a_2*c_1+b_2*r-b_1*r-b_2$ & $a_2*c_2-b_2*r$ \\
+	\hline
+	\end{tabular}
+\end{center}
+	
 
 
 \end{document}

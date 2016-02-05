@@ -114,8 +114,13 @@ end
 polesG = pole(Gc);  % Poles for Continous
 polesGd = exp(Ts*polesG); % Calculated poles for Discrete 
 
+
 % z^4+d0*z^3+d1*z^2+d3
 % A = [1 d0 d1 d3]
 
 % Gd = 1; % Sampled system model
 % Fd = 1; % Transfer function for discrete designed controller
+
+syms z r c0 a1 a2 b1 b2 c1 c2
+expand((z-1)*(z+r)*(z^2+b1*z+b2)+(c0*z^2+c1*z+c2)*(a1*z+a2))
+
