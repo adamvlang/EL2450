@@ -96,11 +96,11 @@ Ts = 4;
 Fd = F_d;
 Gd = c2d(G,Ts,'zoh');
 Gd_closed = (Fd*Gd)/(1+Fd*Gd);
-disp('Task 11: Coefficients for Gd')
+fprintf('\nTask 11: Coefficients for Gd\n')
 for i = 1:length(Gd.num{1}) 
         disp(['a',num2str(i),' = ', num2str(Gd.num{1}(i))])
-
 end
+
 for i = 1:length(Gd.den{1})
         disp(['b',num2str(i),' = ', num2str(Gd.den{1}(i))])
  
@@ -111,8 +111,22 @@ end
 
 % TASK 14
 
-polesG = pole(Gc);  % Poles for Continous
-polesGd = exp(Ts*polesG); % Calculated poles for Discrete 
+Gc_minreal = minreal(Gc);
+polesG = pole(Gc_minreal);  % Poles for Continous
+polesGd = exp(Ts*polesG); % Calculated poles for Discrete'
+
+Gc_polynomial = poly(polesGd);
+
+fprintf('\nTask 14: Desired polynomial cooef for the closed loop system\n')
+for i = 1:5 
+        disp(['d',num2str(i),' = ', num2str(Gc_polynomial(i))])
+end
+
+% TASK 15
+Fd = (c_0*z^2+c_1*z+c_2)/((z-1)(z+r));
+Gd = (a_1*z+a_2)/(Z^2+b_1*z+b_2);
+
+
 
 
 % z^4+d0*z^3+d1*z^2+d3
