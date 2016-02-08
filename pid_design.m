@@ -89,9 +89,9 @@ end
 % TASK 11
 Ts = 4;
 F_d = c2d(F,Ts,'zoh');
-% sim('tanks');
-% plot(LR_disc.Time,LR_disc.Data)
-%title('Performance Closed loop from Q8 with Ts=4')
+sim('tanks');
+plot(LR_disc.Time,LR_disc.Data)
+title('Performance Closed loop from Q8 with Ts=4')
 
 % TASK 12
 
@@ -166,11 +166,12 @@ ylabel('Tank level')
 j=1;
 figure
 color = ['b' 'r' 'k' 'c' 'g'];
-for i = 10:-1:6
-    Q_int = 100/(2^i);
+for i = 6:10
+    disp('Q: ')
+    Q_int = 100/(2^i)
+    sim('tanks')
     plot(LRQ, color(j))
     hold on
-    sim('tanks')
     j = j + 1;
 end
 title('Level of second tank with different quantization levels')
