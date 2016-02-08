@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  8 FEB 2016 16:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  8 FEB 2016 17:17
 entering extended mode
 **HW1.tex
 (HW1.tex
@@ -426,46 +426,42 @@ File: pics/con_zero_compare.png Graphic file (type png)
 Package pdftex.def Info: pics/con_zero_compare.png used on input line 81.
 (pdftex.def)             Requested size: 252.94052pt x 189.70538pt.
 
-<pics/zero_dis_comp_sample_1.png, id=15, 578.16pt x 433.62pt>
-File: pics/zero_dis_comp_sample_1.png Graphic file (type png)
 
-<use pics/zero_dis_comp_sample_1.png>
-Package pdftex.def Info: pics/zero_dis_comp_sample_1.png used on input line 88.
-
-(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
+LaTeX Warning: Reference `fig:cont_zero_step' on page 2 undefined on input line
+ 82.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `fig:ex8' on page 2 undefined on input line 87.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
-
- []
-
-<pics/zero_dis_comp_sample_2.png, id=16, 578.16pt x 433.62pt>
-File: pics/zero_dis_comp_sample_2.png Graphic file (type png)
-
-<use pics/zero_dis_comp_sample_2.png>
-Package pdftex.def Info: pics/zero_dis_comp_sample_2.png used on input line 94.
-
-(pdftex.def)             Requested size: 231.2599pt x 173.44492pt.
+<pics/ex8.png, id=15, 421.575pt x 316.18124pt>
+File: pics/ex8.png Graphic file (type png)
+ <use pics/ex8.png>
+Package pdftex.def Info: pics/ex8.png used on input line 89.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <./pics/con_zero_compare.png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:ex10' on page 2 undefined on input line 103.
+
+<pics/ex10.png, id=16, 421.575pt x 316.18124pt>
+File: pics/ex10.png Graphic file (type png)
+ <use pics/ex10.png>
+Package pdftex.def Info: pics/ex10.png used on input line 105.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+ [2 <./pics/con_zero_compare.png (PNG copy)>]
+
+LaTeX Warning: Reference `fig:ex11' on page 3 undefined on input line 107.
+
 <pics/ex11.png, id=21, 421.575pt x 316.18124pt>
 File: pics/ex11.png Graphic file (type png)
  <use pics/ex11.png>
-Package pdftex.def Info: pics/ex11.png used on input line 115.
+Package pdftex.def Info: pics/ex11.png used on input line 109.
 (pdftex.def)             Requested size: 168.627pt x 126.47025pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[3 <./pics/zero_dis_comp_sample_1.png (PNG copy)> <./pics/zero_dis_comp_sample_
-2.png (PNG copy)>] [4 <./pics/ex11.png (PNG copy)>]
-Overfull \hbox (83.22443pt too wide) detected at line 171
+ [3 <./pics/ex8.png (PNG copy)> <./pics/ex10.png (PNG copy)>] [4 <./pics/ex11.p
+ng (PNG copy)>]
+Overfull \hbox (83.22443pt too wide) detected at line 165
 \OML/cmm/m/it/12 z[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 z[]\OT1/cmr/m/n/12 (\OM
 L/cmm/m/it/12 a[]c[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 b[] \OT1/cmr/m/n/12 + \
 OML/cmm/m/it/12 r \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 1) + \OML/cmm/m/it/12 z[]\
@@ -480,23 +476,30 @@ r \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 b[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 a
  []
 
 
-Overfull \hbox (103.69623pt too wide) in paragraph at lines 176--183
+Overfull \hbox (103.69623pt too wide) in paragraph at lines 170--177
  [] 
  []
 
-[5] <pics/ex17.png, id=32, 421.575pt x 316.18124pt>
+[5]
+
+LaTeX Warning: Reference `fig:ex17' on page 6 undefined on input line 229.
+
+<pics/ex17.png, id=32, 421.575pt x 316.18124pt>
 File: pics/ex17.png Graphic file (type png)
  <use pics/ex17.png>
-Package pdftex.def Info: pics/ex17.png used on input line 237.
+Package pdftex.def Info: pics/ex17.png used on input line 231.
 (pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+
+
+LaTeX Warning: Reference `fig:ex19' on page 6 undefined on input line 240.
 
 <pics/ex19.png, id=33, 514.92375pt x 98.61844pt>
 File: pics/ex19.png Graphic file (type png)
  <use pics/ex19.png>
-Package pdftex.def Info: pics/ex19.png used on input line 247.
+Package pdftex.def Info: pics/ex19.png used on input line 241.
 (pdftex.def)             Requested size: 411.93954pt x 78.89484pt.
 
-Overfull \hbox (21.93954pt too wide) in paragraph at lines 247--247
+Overfull \hbox (21.93954pt too wide) in paragraph at lines 241--241
  [][] 
  []
 
@@ -506,26 +509,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <pics/ex20.png, id=34, 281.05pt x 210.7875pt>
 File: pics/ex20.png Graphic file (type png)
  <use pics/ex20.png>
-Package pdftex.def Info: pics/ex20.png used on input line 252.
+Package pdftex.def Info: pics/ex20.png used on input line 246.
 (pdftex.def)             Requested size: 281.0493pt x 210.78699pt.
+ [6 <./pics/ex17.png (PNG copy)>] [7 <./pics/ex19.png> <./pics/ex20.png>] (HW1.
+aux)
 
+LaTeX Warning: There were undefined references.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[6 <./pics/ex17.png (PNG copy)>] [7 <./pics/ex19.png> <./pics/ex20.png>]
-(HW1.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  2931 strings out of 493673
- 35024 string characters out of 3141524
- 102207 words of memory out of 3000000
+ 34816 string characters out of 3141524
+ 101133 words of memory out of 3000000
  6236 multiletter control sequences out of 15000+200000
  12913 words of font info for 38 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,8n,26p,349b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,8n,26p,353b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\ecbx1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi600\ecrm1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\
@@ -538,9 +540,9 @@ onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW1.pdf (7 pages, 305415 bytes).
+Output written on HW1.pdf (7 pages, 267968 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
