@@ -47,25 +47,25 @@ Ts = 1; % Sampling time
 samplingTimes = [1,2,4,8,16];
 
 % for i = 1:length(samplingTimes)
-for i = 0.25:0.01:0.3
+for i = 1:10
     Ts = i;
-    Ff = c2d(F,Ts,'zoh');    
-%     sim('tanks')
-%     figure
-%     plot(LR_zero.Time,LR_zero.Data,'b')
-%     hold on
-%     plot(LR_con.Time,LR_con.Data,'r')
-%     hold on
-%     plot([130 130], [35 55],'--k') %settling time limit
-%     hold on
-%     plot([0,200],[53.5,53.5],'--k')
-%     hold on
-%     plot([0,200],[49.8,49.8],'--c')
-%     hold on
-%     plot([0,200],[50.2,50.2],'--c')
-%     xlabel('Time [s]'); ylabel('Water level [cm]')
-%     legend('Discrete Controller','Continous')
-%     title(['Discrete Controller and continuos Controller Sampling time: ',num2str(Ts)])
+    F_d = c2d(F,Ts,'zoh');    
+    sim('tanks')
+    figure
+    plot(LR_zero.Time,LR_zero.Data,'b')
+    hold on
+    plot(LR_con.Time,LR_con.Data,'r')
+    hold on
+    plot([130 130], [35 55],'--k') %settling time limit
+    hold on
+    plot([0,200],[53.5,53.5],'--k')
+    hold on
+    plot([0,200],[49.8,49.8],'--c')
+    hold on
+    plot([0,200],[50.2,50.2],'--c')
+    xlabel('Time [s]'); ylabel('Water level [cm]')
+    legend('Discrete Controller','Continous')
+    title(['Discrete Controller and continuos Controller Sampling time: ',num2str(Ts)])
 %     print(['zero_dis_comp_sample_',num2str(Ts)],'-dpng')
 end
 % Ts = samplingtime
