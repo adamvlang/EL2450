@@ -89,8 +89,8 @@ end
 % TASK 11
 Ts = 4;
 F_d = c2d(F,Ts,'zoh');
-sim('tanks');
-plot(LR_disc.Time,LR_disc.Data)
+%sim('tanks');
+%plot(LR_disc.Time,LR_disc.Data)
 title('Performance Closed loop from Q8 with Ts=4')
 
 % TASK 12
@@ -179,6 +179,11 @@ legend('6 bits', '7 bits', '8 bits', '9 bits', '10 bit')
 xlabel('Time')
 ylabel('Tank level')
 
+figure
+plot(LR_disc)
+title('Closed-loop system with a sampling time of 4s')
+xlabel('Time')
+ylabel('Tank level')
 
 % z^4+d0*z^3+d1*z^2+d3
 % A = [1 d0 d1 d3]
