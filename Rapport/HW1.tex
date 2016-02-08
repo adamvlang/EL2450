@@ -110,7 +110,9 @@
 \subsection{}%10
 
 \subsection{}%11
-Insert picture
+ The control performance is bad with a sampling time of 4 second which is shown in Figure \ref{fig:ex11}. 
+ 
+\fig{0.4}{ex11.png}{ex11}{Step response of closed loop system with $T_s = 4$}
 \subsection{}%12
 
 The coefficients for the discrete systems were derived by using the c2d command in MATLAB which transforms a continuous time system to a discrete time system. The coefficients are the following:
@@ -230,7 +232,9 @@ The poles of the closed loop system are
 which is the same as in Question 11.
 
 \subsection{}%17
-Insert compare picture.
+Using the discrete designed controller instead of the transformed continuous controller improves the control of the system. This is probably due to the controller is designed for a discrete system and the poles have been placed to match the poles in the stable continuous system. Comparison can be seen in Figure \ref{fig:ex17}.
+
+\fig{0.6}{ex17.png}{ex17}{Comparison between discrete designed controller and the transformed continuous controller}
 
 \subsection{}%18
 An input difference of 0-100 with a 10-bit A/D converter gives a quantization level of
@@ -239,12 +243,14 @@ An input difference of 0-100 with a 10-bit A/D converter gives a quantization le
 \end{equation}
 
 \subsection{}%19
-Yeah, we tried that...
+The model in Simulink with quantizer blocks is shown in Figure \ref{fig:ex19}
+\fig{0.8}{ex19.png}{ex19}{Simulink model of the system with quantization blocks}
 
 \subsection{}%20
-When a quantization level of NUMBER was used the control performance started to be degraded. This corresponds to a 6 bit A/D converter.
+When a quantization level of 0.7813 was used the control performance started to be degraded. This corresponds to a 7 bit A/D converter.
 
-FIGUR
+\fig{1}{ex20.png}{ex20}{Comparison between different quantization levels}
+
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  8 FEB 2016 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  8 FEB 2016 16:54
 entering extended mode
 **HW1.tex
 (HW1.tex
@@ -453,9 +453,19 @@ Package pdftex.def Info: pics/zero_dis_comp_sample_2.png used on input line 94.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <./pics/con_zero_compare.png (PNG copy)>] [3 <./pics/zero_dis_comp_sample_1.
-png (PNG copy)> <./pics/zero_dis_comp_sample_2.png (PNG copy)>]
-Overfull \hbox (83.22443pt too wide) detected at line 169
+[2 <./pics/con_zero_compare.png (PNG copy)>]
+<pics/ex11.png, id=21, 421.575pt x 316.18124pt>
+File: pics/ex11.png Graphic file (type png)
+ <use pics/ex11.png>
+Package pdftex.def Info: pics/ex11.png used on input line 115.
+(pdftex.def)             Requested size: 168.627pt x 126.47025pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3 <./pics/zero_dis_comp_sample_1.png (PNG copy)> <./pics/zero_dis_comp_sample_
+2.png (PNG copy)>] [4 <./pics/ex11.png (PNG copy)>]
+Overfull \hbox (83.22443pt too wide) detected at line 171
 \OML/cmm/m/it/12 z[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 z[]\OT1/cmr/m/n/12 (\OM
 L/cmm/m/it/12 a[]c[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 b[] \OT1/cmr/m/n/12 + \
 OML/cmm/m/it/12 r \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 1) + \OML/cmm/m/it/12 z[]\
@@ -470,34 +480,67 @@ r \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 b[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 a
  []
 
 
-Overfull \hbox (103.69623pt too wide) in paragraph at lines 174--181
+Overfull \hbox (103.69623pt too wide) in paragraph at lines 176--183
  [] 
  []
 
-[4] [5] [6] (HW1.aux) ) 
+[5] <pics/ex17.png, id=32, 421.575pt x 316.18124pt>
+File: pics/ex17.png Graphic file (type png)
+ <use pics/ex17.png>
+Package pdftex.def Info: pics/ex17.png used on input line 237.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+
+<pics/ex19.png, id=33, 514.92375pt x 98.61844pt>
+File: pics/ex19.png Graphic file (type png)
+ <use pics/ex19.png>
+Package pdftex.def Info: pics/ex19.png used on input line 247.
+(pdftex.def)             Requested size: 411.93954pt x 78.89484pt.
+
+Overfull \hbox (21.93954pt too wide) in paragraph at lines 247--247
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pics/ex20.png, id=34, 281.05pt x 210.7875pt>
+File: pics/ex20.png Graphic file (type png)
+ <use pics/ex20.png>
+Package pdftex.def Info: pics/ex20.png used on input line 252.
+(pdftex.def)             Requested size: 281.0493pt x 210.78699pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./pics/ex17.png (PNG copy)>] [7 <./pics/ex19.png> <./pics/ex20.png>]
+(HW1.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2907 strings out of 493673
- 34668 string characters out of 3141524
- 101163 words of memory out of 3000000
- 6216 multiletter control sequences out of 15000+200000
+ 2931 strings out of 493673
+ 35024 string characters out of 3141524
+ 102207 words of memory out of 3000000
+ 6236 multiletter control sequences out of 15000+200000
  12913 words of font info for 38 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,8n,26p,235b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\Users\Gabriel\AppData\Local
-\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Gabriel\A
-ppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW1.pdf (6 pages, 221902 bytes).
+ 27i,8n,26p,349b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
+0\ecbx1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
+pen\ec\dpi600\ecrm1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2
+.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW1.pdf (7 pages, 305415 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
+ 178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
