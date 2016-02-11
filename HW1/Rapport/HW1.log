@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  8 FEB 2016 17:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.16)  8 FEB 2016 17:25
 entering extended mode
-**HW1.tex
+**./HW1.tex
 (HW1.tex
-LaTeX2e <2015/01/01> patch level 2
+LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -95,17 +95,19 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@posthook=\toks20
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -226,6 +228,10 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -233,6 +239,10 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -252,9 +262,11 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -272,6 +284,14 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -283,7 +303,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -369,18 +389,20 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\was\gensymb.sty"
 Package: gensymb 2003/07/02 v1.0 (WaS)
 ) (HW1.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+\openout1 = `HW1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -396,72 +418,65 @@ LaTeX Font Info:    ... okay on input line 29.
 \makeMPintoPDFobject=\count106
 \everyMPtoPDFconversion=\toks23
 )
-LaTeX Info: Redefining \celsius on input line 29.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 29.
+LaTeX Info: Redefining \celsius on input line 30.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 30.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 29.
-Package gensymb Info: Using \Omega for \ohm on input line 29.
+LaTeX Info: Redefining \ohm on input line 30.
+Package gensymb Info: Using \Omega for \ohm on input line 30.
 
 Package gensymb Warning: Not defining \micro.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 46.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 46.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+HW1.tex:32: Extra alignment tab has been changed to \cr
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
 
-{C:/Users/Gabriel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<pics/con_zero_compare.png, id=14, 632.3625pt x 474.27188pt>
+[1
+
+{C:/Users/Lamn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<pics/con_zero_compare.png, id=13, 632.3625pt x 474.27188pt>
 File: pics/con_zero_compare.png Graphic file (type png)
 
 <use pics/con_zero_compare.png>
-Package pdftex.def Info: pics/con_zero_compare.png used on input line 81.
+Package pdftex.def Info: pics/con_zero_compare.png used on input line 82.
 (pdftex.def)             Requested size: 252.94052pt x 189.70538pt.
-
-
-LaTeX Warning: Reference `fig:cont_zero_step' on page 2 undefined on input line
- 82.
-
-
-LaTeX Warning: Reference `fig:ex8' on page 2 undefined on input line 87.
-
-<pics/ex8.png, id=15, 421.575pt x 316.18124pt>
+ [2 <./pics/con_zero_compare.png (PNG copy)>]
+<pics/ex8.png, id=20, 421.575pt x 316.18124pt>
 File: pics/ex8.png Graphic file (type png)
  <use pics/ex8.png>
-Package pdftex.def Info: pics/ex8.png used on input line 89.
+Package pdftex.def Info: pics/ex8.png used on input line 90.
+(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+
+<pics/ex10.png, id=21, 421.575pt x 316.18124pt>
+File: pics/ex10.png Graphic file (type png)
+ <use pics/ex10.png>
+Package pdftex.def Info: pics/ex10.png used on input line 106.
 (pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-LaTeX Warning: Reference `fig:ex10' on page 2 undefined on input line 103.
-
-<pics/ex10.png, id=16, 421.575pt x 316.18124pt>
-File: pics/ex10.png Graphic file (type png)
- <use pics/ex10.png>
-Package pdftex.def Info: pics/ex10.png used on input line 105.
-(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
- [2 <./pics/con_zero_compare.png (PNG copy)>]
-
-LaTeX Warning: Reference `fig:ex11' on page 3 undefined on input line 107.
-
-<pics/ex11.png, id=21, 421.575pt x 316.18124pt>
+<pics/ex11.png, id=22, 421.575pt x 316.18124pt>
 File: pics/ex11.png Graphic file (type png)
  <use pics/ex11.png>
-Package pdftex.def Info: pics/ex11.png used on input line 109.
+Package pdftex.def Info: pics/ex11.png used on input line 110.
 (pdftex.def)             Requested size: 168.627pt x 126.47025pt.
- [3 <./pics/ex8.png (PNG copy)> <./pics/ex10.png (PNG copy)>] [4 <./pics/ex11.p
+ [3 <./pics/ex8.png (PNG copy)>] [4 <./pics/ex10.png (PNG copy)> <./pics/ex11.p
 ng (PNG copy)>]
-Overfull \hbox (83.22443pt too wide) detected at line 165
+Overfull \hbox (83.22443pt too wide) detected at line 166
 \OML/cmm/m/it/12 z[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 z[]\OT1/cmr/m/n/12 (\OM
 L/cmm/m/it/12 a[]c[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 b[] \OT1/cmr/m/n/12 + \
 OML/cmm/m/it/12 r \OMS/cmsy/m/n/12   \OT1/cmr/m/n/12 1) + \OML/cmm/m/it/12 z[]\
@@ -476,73 +491,55 @@ r \OMS/cmsy/m/n/12   \OML/cmm/m/it/12 b[]\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 a
  []
 
 
-Overfull \hbox (103.69623pt too wide) in paragraph at lines 170--177
+Overfull \hbox (103.69623pt too wide) in paragraph at lines 171--178
  [] 
  []
 
-[5]
-
-LaTeX Warning: Reference `fig:ex17' on page 6 undefined on input line 229.
-
-<pics/ex17.png, id=32, 421.575pt x 316.18124pt>
+[5] <pics/ex17.png, id=33, 421.575pt x 316.18124pt>
 File: pics/ex17.png Graphic file (type png)
  <use pics/ex17.png>
-Package pdftex.def Info: pics/ex17.png used on input line 231.
-(pdftex.def)             Requested size: 252.94695pt x 189.7102pt.
+Package pdftex.def Info: pics/ex17.png used on input line 232.
+(pdftex.def)             Requested size: 168.627pt x 126.47025pt.
 
-
-LaTeX Warning: Reference `fig:ex19' on page 6 undefined on input line 240.
-
-<pics/ex19.png, id=33, 514.92375pt x 98.61844pt>
+[6 <./pics/ex17.png (PNG copy)>]
+<pics/ex19.png, id=38, 514.92375pt x 98.61844pt>
 File: pics/ex19.png Graphic file (type png)
  <use pics/ex19.png>
-Package pdftex.def Info: pics/ex19.png used on input line 241.
-(pdftex.def)             Requested size: 411.93954pt x 78.89484pt.
+Package pdftex.def Info: pics/ex19.png used on input line 242.
+(pdftex.def)             Requested size: 308.95662pt x 59.17151pt.
 
-Overfull \hbox (21.93954pt too wide) in paragraph at lines 241--241
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pics/ex20.png, id=34, 281.05pt x 210.7875pt>
+<pics/ex20.png, id=39, 281.05pt x 210.7875pt>
 File: pics/ex20.png Graphic file (type png)
  <use pics/ex20.png>
-Package pdftex.def Info: pics/ex20.png used on input line 246.
+Package pdftex.def Info: pics/ex20.png used on input line 247.
 (pdftex.def)             Requested size: 281.0493pt x 210.78699pt.
- [6 <./pics/ex17.png (PNG copy)>] [7 <./pics/ex19.png> <./pics/ex20.png>] (HW1.
-aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [7 <./pics/ex19.png> <./pics/ex20.png>] (HW1.aux) ) 
 Here is how much of TeX's memory you used:
- 2931 strings out of 493673
- 34816 string characters out of 3141524
- 101133 words of memory out of 3000000
- 6236 multiletter control sequences out of 15000+200000
- 12913 words of font info for 38 fonts, out of 3000000 for 9000
+ 2960 strings out of 493634
+ 35140 string characters out of 3141316
+ 101685 words of memory out of 3000000
+ 6301 multiletter control sequences out of 15000+200000
+ 16284 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,8n,26p,353b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecbx1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW1.pdf (7 pages, 267968 bytes).
+ 27i,8n,26p,351b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Lamn\AppData\Loc
+al\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\Lamn\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk> <C:\User
+s\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk>
+ <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
+x1728.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
+pi600\ecrm1440.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkna
+ppen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb>
+Output written on HW1.pdf (7 pages, 289378 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
+ 240 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
