@@ -27,5 +27,8 @@ subplot(3,1,3)
 plot(ctrl3)
 title('Control performance for Pendulum 3')
 
+figure
+plot(Schedule)
+title('Schedule')
 
 
