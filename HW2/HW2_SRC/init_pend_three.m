@@ -1,7 +1,7 @@
  function init_pend_three
  
 global executionTime
-executionTime = 0.006; %executiontime for the controller
+executionTime = 0.01; %executiontime for the controller
 
 schedulingPolicy = 'prioEDF'; %the scheduling policy used in the simulation
 ttInitKernel(schedulingPolicy);
