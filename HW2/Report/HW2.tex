@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: HW2.tex
 % Date Created: 2016 Feb 11
-%  Last Change: 2016 Feb 11
+%  Last Change: 2016 Feb 16
 %     Compiler: make
 %       Author: Adam Lang $ Gabriel Anderson Santiago
 \documentclass[12pt,a4paper]{article}
@@ -11,7 +11,7 @@
 \usepackage[english]{babel}
 \usepackage{graphicx}
 
-\graphicspath{{pics/}}
+\graphicspath{{fig/}}
 
 \title{Homework assignment 2 - EL2450}
 \author{Adam Lang (861110-3956) \& Gabriel Andersson Santiago
@@ -41,7 +41,26 @@
   of tasks $J$ should be shedulable with RM.
 
 \section{}%3
+    \begin{center}
+      \begin{figure}
+        \includegraphics[scale=0.5]{ex31.png}
+        \reference{fig:ex31}
+      \end{figure}
+        \caption{Pendulum angles for the three different pendulums}
+    \end{center}
+    
+    \begin{center}
+      \begin{figure}
+        \includegraphics[scale=0.5]{ex32.png}
+        \reference{fig:ex32}
+      \end{figure}
+      \caption{Control signal for pendulum}
+    \end{center}
 
+    The pendulums are indeed stabilized. There is however a slight difference
+    in the control performance. From what we can see is the settling
+    time longer the shorter the pendulum gets. Which is correct
+    according to the lab introduction. 
 
 
 
