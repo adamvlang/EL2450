@@ -2,7 +2,7 @@
 %         File: HW2.tex
 % Date Created: 2016 Feb 11
 %  Last Change: 2016 Feb 16
-%     Compiler: make
+%     Compiler: pdflatex
 %       Author: Adam Lang $ Gabriel Anderson Santiago
 \documentclass[12pt,a4paper]{article}
 \usepackage{amsmath, amssymb}
@@ -35,32 +35,51 @@
   number of computations. When we have a sampling time of 
   $T=\{20, 29, 30\}ms$ and a computation time of 6 ms each we can see that,
   \begin{equation}
-    \frac{6}{20}+\frac{6}{29}+\frac{6}{30}=0.707
+    \frac{6}{20}+\frac{6}{29}+\frac{6}{35}=0.678
   \end{equation}
   and with a utilization factor of $U = 0.780$ we can see that the set
   of tasks $J$ should be shedulable with RM.
 
 \section{}%3
-    \begin{center}
+  \begin{centering}
       \begin{figure}
         \includegraphics[scale=0.5]{ex31.png}
-        \lable{fig:ex31}
+        \label{fig:ex31}
         \caption{Pendulum angles for the three different pendulums}
-      \end{figure}
+      \end{centering}
     \end{center}
     
-    \begin{center}
+    \begin{centering}
       \begin{figure}
         \includegraphics[scale=0.5]{ex32.png}
-        \lable{fig:ex32}
+        \label{fig:ex32}
       \caption{Control signal for pendulum}
       \end{figure}
-    \end{center}
+    \end{centering}
 
     The pendulums are indeed stabilized. There is however a slight difference
     in the control performance. From what we can see is the settling
     time longer the shorter the pendulum gets. Which is correct
     according to the lab introduction. 
+
+\section{}%4
+    \begin{centering}
+      \begin{figure}
+        \includegraphics[scale=0.5]{ex41.png}
+        \label{fig:ex41}
+        \caption{The scheduled }
+      \end{centering}
+    \end{center}
+    
+    \begin{centering}
+      \begin{figure}
+        \includegraphics[scale=0.5]{ex42.png}
+        \label{fig:ex32}
+      \caption{Control signal for pendulum}
+      \end{figure}
+    \end{centering}
+
+
 
 
 
