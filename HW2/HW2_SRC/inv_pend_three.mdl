@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.186"
+    ComputedModelVersion    "1.187"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, -7.0, 1454.0, 934.0]
+      Location		      [-7.0, 0.0, 1454.0, 934.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -39,7 +39,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -54,9 +54,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[2108.0, 1156.0]
-	ZoomFactor		[1.5]
-	Offset			[-22.607775558019171, -28.277133831292844]
+	Extents			[2107.0, 1155.0]
+	ZoomFactor		[1.2845168169746328]
+	Offset			[42.111175465157544, -176.66395486211761]
       }
     }
   }
@@ -66,9 +66,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Gabriel"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Feb 16 16:48:00 2016"
-  RTWModifiedTimeStamp	  377540503
-  ModelVersionFormat	  "1.%<AutoIncrement:186>"
+  LastModifiedDate	  "Thu Feb 18 18:19:42 2016"
+  RTWModifiedTimeStamp	  377720381
+  ModelVersionFormat	  "1.%<AutoIncrement:187>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -162,7 +162,7 @@ Model {
 	  $ObjectID		  8
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
-	  StopTime		  "0.130"
+	  StopTime		  "time"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -808,7 +808,7 @@ Model {
   }
   System {
     Name		    "inv_pend_three"
-    Location		    [-7, -7, 1447, 927]
+    Location		    [-7, 0, 1447, 934]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -820,7 +820,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "128"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "28"
     Block {
@@ -981,7 +981,7 @@ Model {
       "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Place"
       "ment',1),'TimeRangeSamples','1','TimeRangeFrames','1'),extmgr.Configuration('Tools','Plot Navigation',true,'Once"
       "AtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Ve"
-      "rsion','2015b','Location',[1 79.0000000000001 1435.66666666667 926.333333333333])"
+      "rsion','2015b','Location',[1 80.3333333333334 1435.66666666667 927.666666666667])"
     }
     Block {
       BlockType		      Scope
@@ -1021,7 +1021,7 @@ Model {
       "Cache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Placement',1),'Di"
       "splayLayoutDimensions',[3 1],'TimeRangeSamples','1','TimeRangeFrames','1'),extmgr.Configuration('Tools','Plot Na"
       "vigation',true,'OnceAtStop',false),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Version"
-      "','2015b','Location',[1 71.6666666666667 1435.66666666667 919])"
+      "','2015b','Location',[1 80.3333333333334 1435.66666666667 927.666666666667])"
       NumInputPorts	      "3"
     }
     Block {

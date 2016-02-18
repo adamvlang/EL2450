@@ -30,7 +30,7 @@
   \begin{equation}
     U=\sum\limits_{i=1}^n \frac{C_i}{T_i} \leq n(2^{1/n}-1)
   \end{equation}
-  where $C_i$ is the comutation time, $T_i$ is the period, $U$ is the
+  where $C_i$ is the computation time, $T_i$ is the period, $U$ is the
   utilization factor and $n$ is the
   number of computations. When we have a sampling time of 
   $T=\{20, 29, 30\}ms$ and a computation time of 6 ms each we can see that,
@@ -38,24 +38,24 @@
     \frac{6}{20}+\frac{6}{29}+\frac{6}{35}=0.678
   \end{equation}
   and with a utilization factor of $U = 0.780$ we can see that the set
-  of tasks $J$ should be shedulable with RM.
+  of tasks $J$ should be schedulable with RM.
 
 \section{}%3
-  \begin{centering}
+  \begin{center}
       \begin{figure}
         \includegraphics[scale=0.5]{ex31.png}
         \label{fig:ex31}
         \caption{Pendulum angles for the three different pendulums}
-      \end{centering}
+      \end{figure}
     \end{center}
     
-    \begin{centering}
+    \begin{center}
       \begin{figure}
         \includegraphics[scale=0.5]{ex32.png}
         \label{fig:ex32}
       \caption{Control signal for pendulum}
       \end{figure}
-    \end{centering}
+    \end{center}
 
     The pendulums are indeed stabilized. There is however a slight difference
     in the control performance. From what we can see is the settling
@@ -63,23 +63,152 @@
     according to the lab introduction. 
 
 \section{}%4
-    \begin{centering}
+
+The schedule plot from Simulink corresponds to our own schedule. This can be seen in figure 3 and 4. Be aware that our schedule is ordered from shortest-longest pendulum and the one from Simulink is longest-shortest pendulum.
+    \begin{center}
       \begin{figure}
-        \includegraphics[scale=0.5]{ex41.png}
+        \includegraphics[scale=0.3]{ex41.png}
         \label{fig:ex41}
-        \caption{The scheduled }
-      \end{centering}
+        \caption{Our schedule for 6 ms computation time}
+     \end{figure}
     \end{center}
     
-    \begin{centering}
+    \begin{center}
       \begin{figure}
-        \includegraphics[scale=0.5]{ex42.png}
+        \includegraphics[scale=0.2]{ex42.png}
+        \label{fig:ex32}
+      \caption{Schedule from Simulink for 6 ms}
+      \end{figure}
+    \end{center}
+
+
+\section{} %5
+The longest pendulum becomes unstable after a few seconds due to missed deadlines.
+\begin{center}
+      \begin{figure}
+        \includegraphics[scale=0.5]{ex531.png}
+        \label{fig:ex31}
+        \caption{Pendulum angles for the three different pendulums}
+      \end{figure}
+    \end{center}
+    
+    \begin{center}
+      \begin{figure}
+        \includegraphics[scale=0.5]{ex532.png}
         \label{fig:ex32}
       \caption{Control signal for pendulum}
       \end{figure}
-    \end{centering}
+    \end{center}
+    
+    
+Our schedule for a computation time of 10 ms can be seen in figure 5. Deadlines are missed for the long pendulum which means that the tasks are not schedulable. This is verified by calculating the equation
+\begin{equation}
+ U <= n(2^{(1/n)}-1 = 3*(2^{(1/3)}-1) = 0.779
+\end{equation}
+where
+\begin{equation}
+U = \sum\limits_{i=1}^n \frac{C_i}{D_i} = \frac{10}{20}+\frac{10}{29}+\frac{10}{35} = 1.13
+\end{equation}
+This means that it is not schedulable due to
+\begin{equation}
+1.13 > 0.779
+\end{equation} 
+
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.3]{ex541.png}
+	\label{fig:ex541}
+	\caption{Our schedule for 10 ms computation time}
+	\end{figure}
+\end{center}
 
 
+\section{Earliest Deadline First} %6
+\subsection{}
+Earliest deadline first scheduling executes the task with the shortest time left of its deadline $d_k$. This means that the schedule dynamically changes depending on the different task's deadlines. The advantages of EDF compared to RM is that EDF fully uses the processor computational power while RM is limited to $U=n(2^{1/n}-1)$. Disadvantage is 
+
+\subsection{} %6.2
+The tasks are scheduable if 
+\begin{equation}
+U <= 1
+\end{equation}
+which in this case is
+\begin{equation}
+  U = \frac{6}{20}+\frac{6}{29}+\frac{6}{35}=0.678
+\end{equation}
+which is less than one. 
+\subsection{} %6.3
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.5]{ex61.png}
+	\label{fig:ex61}
+	\caption{Pendulum angles for the three different pendulums}
+	\end{figure}
+\end{center}
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.5]{ex62.png}
+	\label{fig:ex62}
+	\caption{Control signal  for the three different pendulums}
+	\end{figure}
+\end{center}
+
+\subsection{} 
+Our schedule for EDF with 6 ms can be seen in figure NUMBER. The schedule from Simulink can be seen in figure NUMBER. The result from Simulink agrees with our schedule; all tasks are carried out before the next sampling time.
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.5]{ex641.png}
+	\label{fig:ex641}
+	\caption{Our schedule for 6 ms computation time, EDF}
+	\end{figure}
+\end{center}
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.2]{ex642.png}
+	\label{fig:ex642}
+	\caption{Simulink schedule for 6 ms computation time, EDF}
+	\end{figure}
+\end{center}
+
+\subsection{}
+Even though deadlines are missed with EDF the pendulums still reaches a steady state. 
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.5]{ex6531.png}
+	\label{fig:ex61}
+	\caption{Pendulum angles for the three different pendulums, EDF}
+	\end{figure}
+\end{center}
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.5]{ex6532.png}
+	\label{fig:ex62}
+	\caption{Control signal  for the three different pendulums, EDF}
+	\end{figure}
+\end{center}
+The tasks are not scheduable with a computation time of 10 ms due to 
+\begin{equation}
+U = \sum\limits_{i=1}^n \frac{C_i}{D_i} = \frac{10}{20}+\frac{10}{29}+\frac{10}{35} = 1.13 > 1
+\end{equation}
+which we also verified when we created our schedule. Our schedule for a computation time of 10 ms with EDF is shown in figure NUMBER. Simulink schedule for a computation time of 10 ms is shown in figure NUMBER.
+
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.4]{ex6541.png}
+	\label{fig:ex6541}
+	\caption{Our schedule for 10 ms computation time, EDF}
+	\end{figure}
+\end{center}
+\begin{center}
+	\begin{figure}
+	\includegraphics[scale=0.2]{ex6542.png}
+	\label{fig:ex6542}
+	\caption{Simulink schedule for 10 ms computation time, EDF}
+	\end{figure}
+\end{center}
+
+\subsection{}
+The controller performs better with EDF due to every pendulum reach a steady state which pendulum 3 does not with RM. 
 
 
 
