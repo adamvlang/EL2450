@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.187"
+    ComputedModelVersion    "1.188"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -54,9 +54,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[2107.0, 1155.0]
+	Extents			[1404.0, 759.0]
 	ZoomFactor		[1.2845168169746328]
-	Offset			[42.111175465157544, -176.66395486211761]
+	Offset			[42.111175465157544, -176.66395486211763]
       }
     }
   }
@@ -64,11 +64,11 @@ Model {
   Creator		  "anton"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Gabriel"
+  LastModifiedBy	  "gabri"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Feb 18 18:19:42 2016"
-  RTWModifiedTimeStamp	  377720381
-  ModelVersionFormat	  "1.%<AutoIncrement:187>"
+  LastModifiedDate	  "Thu Feb 18 21:08:49 2016"
+  RTWModifiedTimeStamp	  377730529
+  ModelVersionFormat	  "1.%<AutoIncrement:188>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -981,7 +981,7 @@ Model {
       "nePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',0,'LineNames',{{[]}},'ShowContent',true,'Place"
       "ment',1),'TimeRangeSamples','1','TimeRangeFrames','1'),extmgr.Configuration('Tools','Plot Navigation',true,'Once"
       "AtStop',false,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2015b')),'Ve"
-      "rsion','2015b','Location',[1 80.3333333333334 1435.66666666667 927.666666666667])"
+      "rsion','2015b','Location',[1 76 1921 1039])"
     }
     Block {
       BlockType		      Scope
