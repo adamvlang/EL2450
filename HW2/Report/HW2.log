@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.4)  19 FEB 2016 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.16)  19 FEB 2016 18:24
 entering extended mode
-**HW2.tex
+**./HW2.tex
 (HW2.tex
-LaTeX2e <2015/01/01> patch level 2
+LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -95,17 +95,19 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@posthook=\toks20
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -226,6 +228,10 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -233,6 +239,10 @@ File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -252,9 +262,11 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -272,6 +284,14 @@ File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -283,7 +303,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
+File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -685,6 +705,7 @@ LaTeX Warning: Label `fig:ex61' multiply defined.
 
 LaTeX Warning: Label `fig:ex62' multiply defined.
 
+(Networkpart.aux)
 
 LaTeX Warning: Label `fig:des1' multiply defined.
 
@@ -692,6 +713,8 @@ LaTeX Warning: Label `fig:des1' multiply defined.
 LaTeX Warning: Label `fig:des1' multiply defined.
 
 )
+\openout1 = `HW2.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
@@ -739,7 +762,7 @@ Package pdftex.def Info: fig/ex31.png used on input line 52.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [1
 
-{C:/Users/Gabriel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Lamn/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <fig/ex32.png, id=20, 632.3625pt x 474.27188pt>
 File: fig/ex32.png Graphic file (type png)
  <use fig/ex32.png>
@@ -786,108 +809,121 @@ Package pdftex.def Info: fig/ex542.png used on input line 136.
 <fig/ex61.png, id=45, 632.3625pt x 474.27188pt>
 File: fig/ex61.png Graphic file (type png)
  <use fig/ex61.png>
-Package pdftex.def Info: fig/ex61.png used on input line 161.
+Package pdftex.def Info: fig/ex61.png used on input line 164.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
 
 <fig/ex62.png, id=46, 632.3625pt x 474.27188pt>
 File: fig/ex62.png Graphic file (type png)
  <use fig/ex62.png>
-Package pdftex.def Info: fig/ex62.png used on input line 169.
+Package pdftex.def Info: fig/ex62.png used on input line 172.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [7 <./fig/ex61.png (PNG copy)>] <fig/ex641.png, id=51, 739.26187pt x 310.66063
 pt>
 File: fig/ex641.png Graphic file (type png)
 
 <use fig/ex641.png>
-Package pdftex.def Info: fig/ex641.png used on input line 180.
+Package pdftex.def Info: fig/ex641.png used on input line 183.
 (pdftex.def)             Requested size: 369.63002pt x 155.32993pt.
  [8 <./fig/ex62.png (PNG copy)> <./fig/ex641.png>]
 <fig/ex642.png, id=56, 1609.51312pt x 929.72343pt>
 File: fig/ex642.png Graphic file (type png)
  <use fig/ex642.png>
-Package pdftex.def Info: fig/ex642.png used on input line 188.
+Package pdftex.def Info: fig/ex642.png used on input line 191.
 (pdftex.def)             Requested size: 321.89693pt x 185.94139pt.
 
 <fig/ex6531.png, id=57, 632.3625pt x 474.27188pt>
 File: fig/ex6531.png Graphic file (type png)
  <use fig/ex6531.png>
-Package pdftex.def Info: fig/ex6531.png used on input line 199.
+Package pdftex.def Info: fig/ex6531.png used on input line 202.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [9 <./fig/ex642.png (PNG copy)>] <fig/ex6532.png, id=61, 632.3625pt x 474.2718
 8pt>
 File: fig/ex6532.png Graphic file (type png)
 
 <use fig/ex6532.png>
-Package pdftex.def Info: fig/ex6532.png used on input line 207.
+Package pdftex.def Info: fig/ex6532.png used on input line 210.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [10 <./fig/ex6531.png (PNG copy)> <./fig/ex6532.png (PNG copy)>] <fig/ex6541.p
 ng, id=65, 840.64063pt x 354.32375pt>
 File: fig/ex6541.png Graphic file (type png)
  <use fig/ex6541.png>
-Package pdftex.def Info: fig/ex6541.png used on input line 221.
+Package pdftex.def Info: fig/ex6541.png used on input line 224.
 (pdftex.def)             Requested size: 336.25029pt x 141.72697pt.
 
 <fig/ex6542.png, id=66, 1609.51312pt x 929.72343pt>
 File: fig/ex6542.png Graphic file (type png)
  <use fig/ex6542.png>
-Package pdftex.def Info: fig/ex6542.png used on input line 229.
+Package pdftex.def Info: fig/ex6542.png used on input line 232.
 (pdftex.def)             Requested size: 321.89693pt x 185.94139pt.
 
-[11 <./fig/ex6541.png> <./fig/ex6542.png (PNG copy)>]
+[11 <./fig/ex6541.png> <./fig/ex6542.png (PNG copy)>] [12]
+\openout2 = `Networkpart.aux'.
 
-LaTeX Warning: Command \textsection invalid in math mode on input line 262.
+ (Networkpart.tex
+<fig/network_delay.png, id=76, 810.02625pt x 400.49625pt>
+File: fig/network_delay.png Graphic file (type png)
 
+<use fig/network_delay.png>
+Package pdftex.def Info: fig/network_delay.png used on input line 8.
+(pdftex.def)             Requested size: 405.01213pt x 200.24763pt.
 
-LaTeX Warning: Command \textsection invalid in math mode on input line 262.
+Overfull \hbox (15.01213pt too wide) in paragraph at lines 8--9
+ [][] 
+ []
 
-Missing character: There is no Ÿ in font cmr12!
-Missing character: There is no Ÿ in font cmr12!
-<fig/des1.png, id=71, 532.99126pt x 462.72874pt>
+) [13
+
+ <./fig/network_delay.png (PNG copy)>]
+<fig/des1.png, id=81, 532.99126pt x 462.72874pt>
 File: fig/des1.png Graphic file (type png)
  <use fig/des1.png>
-Package pdftex.def Info: fig/des1.png used on input line 277.
+Package pdftex.def Info: fig/des1.png used on input line 304.
 (pdftex.def)             Requested size: 266.49498pt x 231.3638pt.
- [12]
-<fig/des2.png, id=75, 487.32062pt x 563.60562pt>
+
+<fig/des2.png, id=82, 487.32062pt x 563.60562pt>
 File: fig/des2.png Graphic file (type png)
  <use fig/des2.png>
-Package pdftex.def Info: fig/des2.png used on input line 297.
+Package pdftex.def Info: fig/des2.png used on input line 324.
 (pdftex.def)             Requested size: 341.1221pt x 394.52124pt.
- [13 <./fig/des1.png>] <fig/des3.png, id=81, 567.11874pt x 538.01pt>
+ [14
+
+ <./fig/des1.png>] <fig/des3.png, id=87, 567.11874pt x 538.01pt>
 File: fig/des3.png Graphic file (type png)
  <use fig/des3.png>
-Package pdftex.def Info: fig/des3.png used on input line 308.
+Package pdftex.def Info: fig/des3.png used on input line 335.
 (pdftex.def)             Requested size: 283.55867pt x 269.00433pt.
 
-[14 <./fig/des2.png>] [15 <./fig/des3.png>] (HW2.aux)
+[15 <./fig/des2.png>] [16 <./fig/des3.png>] (HW2.aux (Networkpart.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12862 strings out of 493673
- 246791 string characters out of 3141524
- 281185 words of memory out of 3000000
- 15946 multiletter control sequences out of 15000+200000
+ 12894 strings out of 493634
+ 247211 string characters out of 3141316
+ 282939 words of memory out of 3000000
+ 16007 multiletter control sequences out of 15000+200000
  16192 words of font info for 50 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,7n,54p,433b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
-0\ecti1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
-pen\ec\dpi600\ecrm1200.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Gabriel\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Gabriel\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Gabrie
-l\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on HW2.pdf (15 pages, 1119483 bytes).
+ 55i,9n,54p,435b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
+cti1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
+\dpi600\ecrm1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecbx1440.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Lamn\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW2.pdf (16 pages, 1173035 bytes).
 PDF statistics:
- 288 PDF objects out of 1000 (max. 8388607)
+ 300 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

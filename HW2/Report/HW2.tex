@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: HW2.tex
 % Date Created: 2016 Feb 11
-%  Last Change: 2016 Feb 16
+%  Last Change: 2016 Feb 19
 %     Compiler: pdflatex
 %       Author: Adam Lang $ Gabriel Anderson Santiago
 \documentclass[12pt,a4paper]{article}
@@ -139,7 +139,10 @@ Our schedule for a computation time of 10 ms can be seen in figure NUMBER as wel
 	\end{figure}
 \end{center}
 
-\section{Earliest Deadline First} %6
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TASK 1.2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Earliest Deadline First}
 \subsection{}
 Earliest deadline first scheduling executes the task with the shortest time left of its deadline $d_k$. This means that the schedule dynamically changes depending on the different task's deadlines. The advantages of EDF compared to RM is that EDF fully uses the processor computational power while RM is limited to $U=n(2^{1/n}-1)$. Disadvantage is 
 
@@ -235,14 +238,19 @@ which we also verified when we created our schedule. Our schedule for a computat
 \subsection{}
 The controller performs better with Earliest Deadline First due to every pendulum stabilizes which pendulum 3 does not with Rate Monotonic. 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TASK 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \section{Network Control System}
 \subsection{} %1
 We have the following system
-\begin{center}
-
-$\dot{x}(t) = Ax(t)+Bu(t)$ \\
-$y(t) = Cx(t)$
-\end{center}
+  \begin{equation}
+    \dot{x}(t) = Ax(t)+Bu(t) \\
+    y(t) = Cx(t)
+    \label{eq:system}
+  \end{equation}
 where
 \begin{center}
 $A=0$ \\
@@ -252,21 +260,40 @@ and the discrete controller
 \begin{center}
 $u(kh) = -Kx(kh)$,    $k = 0,1,2,...$
 \end{center}
-
-The closed-loop system is given by
-\begin{center}
-$\dot{x} = Iu(kh)= -IKx(kh)$
-\end{center}
-We consider the Lyapunov function candidate $V(x)=IKx^2$. $V(x) >=0$ and is derivative along the closed loop system is
+discretizing the system in equation \ref{eq:system} will give that the
+plant can be writen
 \begin{equation}
-§§\dot{V}=2IKx\dot{x}=2Ikx(-IKx)
+    x((k+1)h)=\Phi x(kh)+\Gamma_{0}(\tau_{k})u(kh)+\Gamma_{1}(\tau_{k})u((k-1)h)
+    \label{eq:disys}
+\end{equation}
+Given that $A=0, B=I$ and that $\tau = \tau_{sc}+\tau_{ca}\le h$ we can
+calculate the matrices,
+\begin{align*}
+    &\Phi=e^{Ah}=1 \\
+    &\Gamma_{0}(\tau_{k})=\int_{0}^{h-\tau_{k}}e^{As}Bds=I(h-\tau) \\
+    &\Gamma_{1}(\tau_{k})=\int_{h-\tau_{k}}^{h}e^{As}Bds=I\tau
+\end{align*}
+Placing that back into the system in equation \ref{eq:disys}
+\begin{equation}
+  x(kh+\tau)=x(kh)+
+  \begin{bmatrix}
+    1 & 0 \\
+    0 & I\tau
+  \end{bmatrix}
+  \begin{bmatrix}
+    x(kh) \\
+    u(kh+\tau)
+  \end{bmatrix}
+  +
+  \begin{bmatrix}
+    I\tau \\
+    1
+  \end{bmatrix}
+  u(k)
 \end{equation}
 
-The analytically calculated closed-loop equations are
-\begin{equation}
-a+b=c
-\end{equation}
-
+\include{Networkpart}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TASK 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Discrete Event System}
 \subsection{}
