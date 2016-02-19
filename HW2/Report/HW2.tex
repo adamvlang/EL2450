@@ -12,6 +12,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \graphicspath{{fig/}}
+\usepackage{tikz}
 
 \title{Homework assignment 2 - EL2450}
 \author{Adam Lang (861110-3956) \& Gabriel Andersson Santiago
@@ -110,7 +111,7 @@ The longest pendulum becomes unstable after a few seconds due to missed deadline
     
 Deadlines are missed for the long pendulum which means that the tasks are not schedulable. This is verified by calculating the equation
 \begin{equation}
- U <= n(2^{(1/n)}-1 = 3*(2^{(1/3)}-1) = 0.779
+ U \le n(2^{(1/n)}-1 = 3*(2^{(1/3)}-1) = 0.779
 \end{equation}
 where
 \begin{equation}
@@ -258,7 +259,7 @@ $\dot{x} = Iu(kh)= -IKx(kh)$
 \end{center}
 We consider the Lyapunov function candidate $V(x)=IKx^2$. $V(x) >=0$ and is derivative along the closed loop system is
 \begin{equation}
-\dot{V}=2IKx\dot{x}=2Ikx(-IKx)
+§§\dot{V}=2IKx\dot{x}=2Ikx(-IKx)
 \end{equation}
 
 The analytically calculated closed-loop equations are
@@ -267,7 +268,50 @@ a+b=c
 \end{equation}
 
 
+\section{Discrete Event System}
+\subsection{}
+Since the state machines M1 and M2 have the same states they are represented as the same state machine. This can be seen in Figure 17.	
+\begin{center}
+	\begin{figure}[H]
+      \centering
+	\includegraphics[scale=0.5]{des1.png}
+	\label{fig:des1}
+	\caption{State machine for M1, M2 and the buffer}
+	\end{figure}
+\end{center}
 
+\subsection{}
+Each state in Figure 18 represents the current state in M1, M2 and the buffer. There are 18 different states available 
+\begin{equation}
+3^2*2 = 18
+\end{equation}
+since both machines has 3 states and the buffer has 2.
+The form ${x,y,z}$ is used where $x=M1,y=Buffer,z=M2$. For example
+\begin{center}
+$IEI = {Idle,Empty,Idle}$
+\end{center}
+The events of each transition are not shown in Figure 18 due to too many transitions and the events are obvious.
+\begin{center}
+	\begin{figure}[H]
+      \centering
+	\includegraphics[scale=0.7]{des2.png}
+	\label{fig:des1}
+	\caption{State machine for M1, M2 and the buffer}
+	\end{figure}
+\end{center}
 
+\subsection{}
+With the requirements given some states could be disregarded due to our interpretation of the functionality of the state machine. We assume that when a process has finished a product and put it in the buffer it goes to idle due to a new product can't begin processing if the buffer is full even though it still could be in the processing state.	
+\begin{center}
+	\begin{figure}[H]
+      \centering
+	\includegraphics[scale=0.5]{des3.png}
+	\label{fig:des1}
+	\caption{State machine for M1, M2 and the buffer}
+	\end{figure}
+\end{center}
+
+\subsection{}
+A controller to make sure the requirements are fulfilled when using the complete Discrete Event System from 4.2 needs to have information of which state each machine is in. Then by using that information \emph{Guards} can be used on each transition along with the event to ensure it goes to the right state. A \emph{Guard} is a form of If-statement used in state machines to set requirements for transitions.
 
 \end{document}
