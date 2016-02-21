@@ -1,0 +1,3 @@
+syms K h
+
+ezplot(1/(h*K))

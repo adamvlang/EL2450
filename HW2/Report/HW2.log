@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.16)  21 FEB 2016 11:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.16)  21 FEB 2016 14:26
 entering extended mode
 **./HW2.tex
 (HW2.tex
@@ -697,15 +697,11 @@ LaTeX Warning: Label `fig:ex31' multiply defined.
 LaTeX Warning: Label `fig:ex32' multiply defined.
 
 
-LaTeX Warning: Label `fig:ex541' multiply defined.
-
-
 LaTeX Warning: Label `fig:ex61' multiply defined.
 
 
 LaTeX Warning: Label `fig:ex62' multiply defined.
 
-(Networkpart.aux)
 
 LaTeX Warning: Label `fig:des1' multiply defined.
 
@@ -758,7 +754,7 @@ Overfull \hbox (55.70593pt too wide) in paragraph at lines 22--22
 <fig/ex31.png, id=4, 632.3625pt x 474.27188pt>
 File: fig/ex31.png Graphic file (type png)
  <use fig/ex31.png>
-Package pdftex.def Info: fig/ex31.png used on input line 52.
+Package pdftex.def Info: fig/ex31.png used on input line 53.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [1
 
@@ -766,101 +762,105 @@ Package pdftex.def Info: fig/ex31.png used on input line 52.
 <fig/ex32.png, id=20, 632.3625pt x 474.27188pt>
 File: fig/ex32.png Graphic file (type png)
  <use fig/ex32.png>
-Package pdftex.def Info: fig/ex32.png used on input line 61.
+Package pdftex.def Info: fig/ex32.png used on input line 62.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [2 <./fig/ex31.png (PNG copy)> <./fig/ex32.png (PNG copy)>]
 <fig/ex41.png, id=24, 1032.35687pt x 467.24562pt>
 File: fig/ex41.png Graphic file (type png)
  <use fig/ex41.png>
-Package pdftex.def Info: fig/ex41.png used on input line 75.
+Package pdftex.def Info: fig/ex41.png used on input line 79.
 (pdftex.def)             Requested size: 309.70944pt x 140.17476pt.
 
 <fig/ex42.png, id=26, 1609.51312pt x 929.72343pt>
 File: fig/ex42.png Graphic file (type png)
  <use fig/ex42.png>
-Package pdftex.def Info: fig/ex42.png used on input line 84.
+Package pdftex.def Info: fig/ex42.png used on input line 88.
 (pdftex.def)             Requested size: 321.89693pt x 185.94139pt.
  [3 <./fig/ex41.png> <./fig/ex42.png (PNG copy)>]
 <fig/ex531.png, id=31, 632.3625pt x 474.27188pt>
 File: fig/ex531.png Graphic file (type png)
  <use fig/ex531.png>
-Package pdftex.def Info: fig/ex531.png used on input line 96.
+Package pdftex.def Info: fig/ex531.png used on input line 100.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
 
 <fig/ex532.png, id=32, 632.3625pt x 474.27188pt>
 File: fig/ex532.png Graphic file (type png)
  <use fig/ex532.png>
-Package pdftex.def Info: fig/ex532.png used on input line 105.
+Package pdftex.def Info: fig/ex532.png used on input line 109.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [4 <./fig/ex531.png (PNG copy)>] <fig/ex541.png, id=36, 968.61874pt x 417.56pt
 >
 File: fig/ex541.png Graphic file (type png)
 
 <use fig/ex541.png>
-Package pdftex.def Info: fig/ex541.png used on input line 128.
+Package pdftex.def Info: fig/ex541.png used on input line 135.
 (pdftex.def)             Requested size: 290.58786pt x 125.26895pt.
  [5 <./fig/ex532.png (PNG copy)>]
 <fig/ex542.png, id=40, 1433.355pt x 706.89093pt>
 File: fig/ex542.png Graphic file (type png)
  <use fig/ex542.png>
-Package pdftex.def Info: fig/ex542.png used on input line 136.
+Package pdftex.def Info: fig/ex542.png used on input line 143.
 (pdftex.def)             Requested size: 286.66592pt x 141.37567pt.
  [6 <./fig/ex541.png> <./fig/ex542.png (PNG copy)>]
 <fig/ex61.png, id=45, 632.3625pt x 474.27188pt>
 File: fig/ex61.png Graphic file (type png)
  <use fig/ex61.png>
-Package pdftex.def Info: fig/ex61.png used on input line 164.
+Package pdftex.def Info: fig/ex61.png used on input line 179.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
 
 <fig/ex62.png, id=46, 632.3625pt x 474.27188pt>
 File: fig/ex62.png Graphic file (type png)
  <use fig/ex62.png>
-Package pdftex.def Info: fig/ex62.png used on input line 172.
+Package pdftex.def Info: fig/ex62.png used on input line 187.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
- [7 <./fig/ex61.png (PNG copy)>] <fig/ex641.png, id=51, 739.26187pt x 310.66063
+ [7 <./fig/ex61.png (PNG copy)>] <fig/ex641.png, id=52, 739.26187pt x 310.66063
 pt>
 File: fig/ex641.png Graphic file (type png)
 
 <use fig/ex641.png>
-Package pdftex.def Info: fig/ex641.png used on input line 183.
+Package pdftex.def Info: fig/ex641.png used on input line 201.
 (pdftex.def)             Requested size: 369.63002pt x 155.32993pt.
  [8 <./fig/ex62.png (PNG copy)> <./fig/ex641.png>]
-<fig/ex642.png, id=56, 1609.51312pt x 929.72343pt>
+<fig/ex642.png, id=57, 1609.51312pt x 929.72343pt>
 File: fig/ex642.png Graphic file (type png)
  <use fig/ex642.png>
-Package pdftex.def Info: fig/ex642.png used on input line 191.
+Package pdftex.def Info: fig/ex642.png used on input line 209.
 (pdftex.def)             Requested size: 321.89693pt x 185.94139pt.
 
-<fig/ex6531.png, id=57, 632.3625pt x 474.27188pt>
+<fig/ex6531.png, id=58, 632.3625pt x 474.27188pt>
 File: fig/ex6531.png Graphic file (type png)
  <use fig/ex6531.png>
-Package pdftex.def Info: fig/ex6531.png used on input line 202.
+Package pdftex.def Info: fig/ex6531.png used on input line 220.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
- [9 <./fig/ex642.png (PNG copy)>] <fig/ex6532.png, id=61, 632.3625pt x 474.2718
+ [9 <./fig/ex642.png (PNG copy)>] <fig/ex6532.png, id=62, 632.3625pt x 474.2718
 8pt>
 File: fig/ex6532.png Graphic file (type png)
 
 <use fig/ex6532.png>
-Package pdftex.def Info: fig/ex6532.png used on input line 210.
+Package pdftex.def Info: fig/ex6532.png used on input line 228.
 (pdftex.def)             Requested size: 316.18048pt x 237.13536pt.
  [10 <./fig/ex6531.png (PNG copy)> <./fig/ex6532.png (PNG copy)>] <fig/ex6541.p
-ng, id=65, 840.64063pt x 354.32375pt>
+ng, id=66, 840.64063pt x 354.32375pt>
 File: fig/ex6541.png Graphic file (type png)
  <use fig/ex6541.png>
-Package pdftex.def Info: fig/ex6541.png used on input line 224.
+Package pdftex.def Info: fig/ex6541.png used on input line 246.
 (pdftex.def)             Requested size: 336.25029pt x 141.72697pt.
 
-<fig/ex6542.png, id=66, 1609.51312pt x 929.72343pt>
+<fig/ex6542.png, id=67, 1609.51312pt x 929.72343pt>
 File: fig/ex6542.png Graphic file (type png)
  <use fig/ex6542.png>
-Package pdftex.def Info: fig/ex6542.png used on input line 232.
+Package pdftex.def Info: fig/ex6542.png used on input line 254.
 (pdftex.def)             Requested size: 321.89693pt x 185.94139pt.
 
-[11 <./fig/ex6541.png> <./fig/ex6542.png (PNG copy)>] [12] [13]
-\openout2 = `Networkpart.aux'.
+[11 <./fig/ex6541.png> <./fig/ex6542.png (PNG copy)>] [12]
+<fig/stabilityRegion.png, id=76, 421.575pt x 316.18124pt>
+File: fig/stabilityRegion.png Graphic file (type png)
 
-
-(Networkpart.tex <fig/network_delay.png, id=80, 810.02625pt x 400.49625pt>
+<use fig/stabilityRegion.png>
+Package pdftex.def Info: fig/stabilityRegion.png used on input line 372.
+(pdftex.def)             Requested size: 210.78697pt x 158.09023pt.
+ [13] (Networkpart.tex
+<fig/network_delay.png, id=81, 810.02625pt x 400.49625pt>
 File: fig/network_delay.png Graphic file (type png)
 
 <use fig/network_delay.png>
@@ -871,41 +871,37 @@ Overfull \hbox (15.01213pt too wide) in paragraph at lines 8--9
  [][] 
  []
 
-) [14
-
- <./fig/network_delay.png (PNG copy)>]
-<fig/des1.png, id=84, 532.99126pt x 462.72874pt>
+) [14 <./fig/stabilityRegion.png (PNG copy)> <./fig/network_delay.png (PNG copy
+)>] <fig/des1.png, id=85, 532.99126pt x 462.72874pt>
 File: fig/des1.png Graphic file (type png)
  <use fig/des1.png>
-Package pdftex.def Info: fig/des1.png used on input line 355.
+Package pdftex.def Info: fig/des1.png used on input line 390.
 (pdftex.def)             Requested size: 266.49498pt x 231.3638pt.
 
-<fig/des2.png, id=85, 487.32062pt x 563.60562pt>
+<fig/des2.png, id=86, 487.32062pt x 563.60562pt>
 File: fig/des2.png Graphic file (type png)
  <use fig/des2.png>
-Package pdftex.def Info: fig/des2.png used on input line 375.
+Package pdftex.def Info: fig/des2.png used on input line 412.
 (pdftex.def)             Requested size: 341.1221pt x 394.52124pt.
- [15
-
- <./fig/des1.png>] <fig/des3.png, id=90, 567.11874pt x 538.01pt>
+ [15 <./fig/des1.png>] <fig/des3.png, id=91, 567.11874pt x 538.01pt>
 File: fig/des3.png Graphic file (type png)
  <use fig/des3.png>
-Package pdftex.def Info: fig/des3.png used on input line 386.
+Package pdftex.def Info: fig/des3.png used on input line 427.
 (pdftex.def)             Requested size: 283.55867pt x 269.00433pt.
 
-[16 <./fig/des2.png>] [17 <./fig/des3.png>] (HW2.aux (Networkpart.aux))
+[16 <./fig/des2.png>] [17 <./fig/des3.png>] (HW2.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12903 strings out of 493634
- 247289 string characters out of 3141316
- 284009 words of memory out of 3000000
- 16015 multiletter control sequences out of 15000+200000
+ 12905 strings out of 493634
+ 247377 string characters out of 3141316
+ 283737 words of memory out of 3000000
+ 16020 multiletter control sequences out of 15000+200000
  16968 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,8n,54p,435b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,8n,54p,398b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 cti1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
 \dpi600\ecbx1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
@@ -921,9 +917,9 @@ s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW2.pdf (17 pages, 1170078 bytes).
+Output written on HW2.pdf (17 pages, 1189051 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
+ 314 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -43,15 +43,16 @@
   of tasks $J$ should be schedulable with RM.
 
 \subsection{}%3
- The pendulums are indeed stabilized. There is however a slight difference
- in the control performance. From what we can see is the settling
- time longer the shorter the pendulum gets. Which is correct according to the lab    	introduction. 
+ The pendulums are indeed stabilized. There is however a slight
+ difference in the control performance. From what we can see is the
+ settling time longer the shorter the pendulum gets. Which is correct
+ according to the lab    	introduction. 
   \begin{center}
       \begin{figure}[H]
       \centering
         \includegraphics[scale=0.5]{ex31.png}
-        \label{fig:ex31}
         \caption{Pendulum angles for the three different pendulums}
+        \label{fig:ex31}
       \end{figure}
     \end{center}
     
@@ -59,8 +60,8 @@
       \begin{figure}[H]
       \centering
         \includegraphics[scale=0.5]{ex32.png}
-        \label{fig:ex32}
       \caption{Control signal for pendulum}
+        \label{fig:ex32}
       \end{figure}
     \end{center}
 
@@ -68,13 +69,16 @@
 
 \subsection{}%4
 
-The schedule plot from Simulink corresponds to our own schedule. This can be seen in figure 3 and 4. Be aware that our schedule is ordered from shortest-longest pendulum and the one from Simulink is longest-shortest pendulum.
+The schedule plot from Simulink corresponds to our own schedule. This
+can be seen in figure 3 and 4. Be aware that our schedule is ordered
+from shortest-longest pendulum and the one from Simulink is
+longest-shortest pendulum.
     \begin{center}
       \begin{figure}[H]
       \centering
         \includegraphics[scale=0.3]{ex41.png}
-        \label{fig:ex41}
         \caption{Our schedule for 6 ms computation time}
+        \label{fig:ex41}
      \end{figure}
     \end{center}
     
@@ -82,8 +86,8 @@ The schedule plot from Simulink corresponds to our own schedule. This can be see
      \begin{figure}[H]
       \centering
         \includegraphics[scale=0.2]{ex42.png}
-        \label{fig:ex32}
       \caption{Schedule from Simulink for 6 ms}
+        \label{fig:ex32}
       \end{figure}
     \end{center}
 
@@ -94,8 +98,8 @@ The longest pendulum becomes unstable after a few seconds due to missed deadline
       \begin{figure}[H]
       \centering
         \includegraphics[scale=0.5]{ex531.png}
-        \label{fig:ex31}
         \caption{Pendulum angles for the three different pendulums}
+        \label{fig:ex31}
       \end{figure}
     \end{center}
     
@@ -103,13 +107,14 @@ The longest pendulum becomes unstable after a few seconds due to missed deadline
       \begin{figure}[H]
       \centering
         \includegraphics[scale=0.5]{ex532.png}
-        \label{fig:ex32}
       \caption{Control signal for pendulum}
+        \label{fig:ex32}
       \end{figure}
     \end{center}
     
     
-Deadlines are missed for the long pendulum which means that the tasks are not schedulable. This is verified by calculating the equation
+Deadlines are missed for the long pendulum which means that the tasks
+are not schedulable. This is verified by calculating the equation
 \begin{equation}
  U \le n(2^{(1/n)}-1 = 3*(2^{(1/3)}-1) = 0.779
 \end{equation}
@@ -121,21 +126,23 @@ This means that it is not schedulable due to
 \begin{equation}
 1.13 > 0.779
 \end{equation} 
-Our schedule for a computation time of 10 ms can be seen in figure NUMBER as well can the schedule from Simulink be seen in figure NUMBER. Our schedule is equal to the one from Simulink.
+Our schedule for a computation time of 10 ms can be seen in figure
+\ref{fig:ex541} as well can the schedule from Simulink be seen in figure
+\ref{fig:ex542}. Our schedule is equal to the one from Simulink.
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.3]{ex541.png}
-	\label{fig:ex541}
 	\caption{Our schedule for 10 ms computation time}
+	\label{fig:ex541}
 	\end{figure}
 \end{center}
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.2]{ex542.png}
-	\label{fig:ex541}
 	\caption{Simulink schedule for 10 ms computation time}
+	\label{fig:ex542}
 	\end{figure}
 \end{center}
 
@@ -144,12 +151,16 @@ Our schedule for a computation time of 10 ms can be seen in figure NUMBER as wel
 
 \section{Earliest Deadline First}
 \subsection{}
-Earliest deadline first scheduling executes the task with the shortest time left of its deadline $d_k$. This means that the schedule dynamically changes depending on the different task's deadlines. The advantages of EDF compared to RM is that EDF fully uses the processor computational power while RM is limited to $U=n(2^{1/n}-1)$. Disadvantage is 
+Earliest deadline first scheduling executes the task with the shortest
+time left of its deadline $d_k$. This means that the schedule
+dynamically changes depending on the different task's deadlines. The
+advantages of EDF compared to RM is that EDF fully uses the processor
+computational power while RM is limited to $U=n(2^{1/n}-1)$.
 
 \subsection{} %6.2
-Tasks are schedulable with $Earliest Deadline First$ if 
+Tasks are schedulable with \textbf{Earliest Deadline First} if 
 \begin{equation}
-U <= 1
+U \le 1
 \end{equation}
 which in this case is
 \begin{equation}
@@ -157,40 +168,47 @@ which in this case is
 \end{equation}
 This means that the tasks are schedulable which we verified with our schedule that is shown in 2.4.
 \subsection{} %6.3
-The pendulums have stabilized. The shortest one is the hardest to control just as with Rate monotonic scheduling. There is not a huge difference in the control signal but you can see the sampling time differences. Since pendulum 3 is sampled the slowest it also takes longest time for it to be completely stable.
+The pendulums have stabilized. The shortest one is the hardest to
+control just as with Rate monotonic scheduling. There is not a huge
+difference in the control signal but you can see the sampling time
+differences. Since pendulum 3 is sampled the slowest it also takes
+longest time for it to be completely stable.
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.5]{ex61.png}
-	\label{fig:ex61}
 	\caption{Pendulum angles for the three different pendulums}
+	\label{fig:ex61}
 	\end{figure}
 \end{center}
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.5]{ex62.png}
-	\label{fig:ex62}
 	\caption{Control signal  for the three different pendulums}
+	\label{fig:ex62}
 	\end{figure}
 \end{center}
 
 \subsection{} 
-Our schedule for EDF with 6 ms can be seen in figure NUMBER. The schedule from Simulink can be seen in figure NUMBER. The result from Simulink agrees with our schedule; all tasks are carried out before the next sampling time.
+Our schedule for EDF with 6 ms can be seen in figure \ref{fig:ex641}. The
+schedule from Simulink can be seen in figure \ref{fig:ex642}. The result from
+Simulink agrees with our schedule; all tasks are carried out before the
+next sampling time.
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.5]{ex641.png}
-	\label{fig:ex641}
 	\caption{Our schedule for 6 ms computation time, EDF}
+	\label{fig:ex641}
 	\end{figure}
 \end{center}
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.2]{ex642.png}
-	\label{fig:ex642}
 	\caption{Simulink schedule for 6 ms computation time, EDF}
+	\label{fig:ex642}
 	\end{figure}
 \end{center}
 
@@ -200,43 +218,48 @@ Even though deadlines are missed with EDF the pendulums still stabilizes.
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.5]{ex6531.png}
-	\label{fig:ex61}
 	\caption{Pendulum angles for the three different pendulums, EDF}
+	\label{fig:ex61}
 	\end{figure}
 \end{center}
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.5]{ex6532.png}
-	\label{fig:ex62}
 	\caption{Control signal  for the three different pendulums, EDF}
+	\label{fig:ex62}
 	\end{figure}
 \end{center}
 The tasks are not schedulable with a computation time of 10 ms due to 
 \begin{equation}
 U = \sum\limits_{i=1}^n \frac{C_i}{D_i} = \frac{10}{20}+\frac{10}{29}+\frac{10}{35} = 1.13 > 1
 \end{equation}
-which we also verified when we created our schedule. Our schedule for a computation time of 10 ms with EDF is shown in figure NUMBER. Simulink schedule for a computation time of 10 ms is shown in figure NUMBER. Our schedule matches the one from Simulink.
+which we also verified when we created our schedule. Our schedule for a
+computation time of 10 ms with EDF is shown in figure \ref{fig:ex6541}. Simulink
+schedule for a computation time of 10 ms is shown in figure
+\ref{fig:ex6542}. Our
+schedule matches the one from Simulink.
 
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.4]{ex6541.png}
-	\label{fig:ex6541}
 	\caption{Our schedule for 10 ms computation time, EDF}
+	\label{fig:ex6541}
 	\end{figure}
 \end{center}
 \begin{center}
 	\begin{figure}[H]
       \centering
 	\includegraphics[scale=0.2]{ex6542.png}
-	\label{fig:ex6542}
 	\caption{Simulink schedule for 10 ms computation time, EDF}
+	\label{fig:ex6542}
 	\end{figure}
 \end{center}
 
 \subsection{}
-The controller performs better with Earliest Deadline First due to every pendulum stabilizes which pendulum 3 does not with Rate Monotonic. 
+The controller performs better with Earliest Deadline First due to every
+pendulum stabilizes which pendulum 3 does not with Rate Monotonic. 
 
 
 
@@ -288,7 +311,7 @@ gives,
   \end{bmatrix}
 \end{equation}
 
-\subsubsection{} % (fold)
+\subsection{} % (fold)
 
 Considering the systems denominator of the transfer function on the
 form, 
@@ -326,7 +349,7 @@ and for $a_1$
 Calculating the eigenvalues of \ref{eq:disys} will give the poles of the
 system, which together with equation \ref{eq:a2} and \ref{eq:a1} give,
 \begin{equation}
-  a_2 = KI\tau
+  a_2 = -KI\tau
   \label{eq:a2new}
 \end{equation}
 and
@@ -341,14 +364,26 @@ relation,
   max\left\{\frac{1}{2}-\frac{1}{KIh},0\right\}<\frac{\tau}{h}<min\left\{\frac{1}{KIh},1\right\}.
 \end{equation}
 must be satisfied for stability.
-% subsubsection  (end)
 
-\include{Networkpart}
+The stability criteria can be represented graphically plotted as a
+stability region. This can be seen in figure \ref{fig:stabilityRegion}.
+\begin{figure}[H]
+    \begin{center}
+      \includegraphics[scale=0.5]{stabilityRegion.png}
+      \caption{Stability region}
+      \label{fig:stabilityRegion}
+    \end{center}
+\end{figure}
+
+\input{Networkpart}
+% subsection  (end)
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TASK 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Discrete Event System}
 \subsection{}
-Since the state machines M1 and M2 have the same states they are represented as the same state machine. This can be seen in Figure 17.	
+Since the state machines M1 and M2 have the same states they are
+represented as the same state machine. This can be seen in Figure 17.	
 \begin{center}
 	\begin{figure}[H]
       \centering
@@ -359,7 +394,8 @@ Since the state machines M1 and M2 have the same states they are represented as 
 \end{center}
 
 \subsection{}
-Each state in Figure 18 represents the current state in M1, M2 and the buffer. There are 18 different states available 
+Each state in Figure 18 represents the current state in M1, M2 and the
+buffer. There are 18 different states available 
 \begin{equation}
 3^2*2 = 18
 \end{equation}
@@ -368,7 +404,8 @@ The form ${x,y,z}$ is used where $x=M1,y=Buffer,z=M2$. For example
 \begin{center}
 $IEI = {Idle,Empty,Idle}$
 \end{center}
-The events of each transition are not shown in Figure 18 due to too many transitions and the events are obvious.
+The events of each transition are not shown in Figure 18 due to too many
+transitions and the events are obvious.
 \begin{center}
 	\begin{figure}[H]
       \centering
@@ -379,7 +416,11 @@ The events of each transition are not shown in Figure 18 due to too many transit
 \end{center}
 
 \subsection{}
-With the requirements given some states could be disregarded due to our interpretation of the functionality of the state machine. We assume that when a process has finished a product and put it in the buffer it goes to idle due to a new product can't begin processing if the buffer is full even though it still could be in the processing state.	
+With the requirements given some states could be disregarded due to our
+interpretation of the functionality of the state machine. We assume that
+when a process has finished a product and put it in the buffer it goes
+to idle due to a new product can't begin processing if the buffer is
+full even though it still could be in the processing state.
 \begin{center}
 	\begin{figure}[H]
       \centering
@@ -390,6 +431,11 @@ With the requirements given some states could be disregarded due to our interpre
 \end{center}
 
 \subsection{}
-A controller to make sure the requirements are fulfilled when using the complete Discrete Event System from 4.2 needs to have information of which state each machine is in. Then by using that information \emph{Guards} can be used on each transition along with the event to ensure it goes to the right state. A \emph{Guard} is a form of If-statement used in state machines to set requirements for transitions.
+A controller to make sure the requirements are fulfilled when using the
+complete Discrete Event System from 4.2 needs to have information of
+which state each machine is in. Then by using that information
+\emph{Guards} can be used on each transition along with the event to
+ensure it goes to the right state. A \emph{Guard} is a form of
+If-statement used in state machines to set requirements for transitions.
 
 \end{document}
