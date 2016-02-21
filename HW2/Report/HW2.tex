@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: HW2.tex
 % Date Created: 2016 Feb 11
-%  Last Change: 2016 Feb 19
+%  Last Change: 2016 Feb 21
 %     Compiler: pdflatex
 %       Author: Adam Lang $ Gabriel Anderson Santiago
 \documentclass[12pt,a4paper]{article}
@@ -257,40 +257,91 @@ $A=0$ \\
 $B=I$
 \end{center}
 and the discrete controller
-\begin{center}
-$u(kh) = -Kx(kh)$,    $k = 0,1,2,...$
-\end{center}
+\begin{equation}
+    u(kh) = -Kx(kh),    k = 0,1,2,...
+    \label{eq:u}
+\end{equation}
 discretizing the system in equation \ref{eq:system} will give that the
 plant can be writen
 \begin{equation}
-    x((k+1)h)=\Phi x(kh)+\Gamma_{0}(\tau_{k})u(kh)+\Gamma_{1}(\tau_{k})u((k-1)h)
+    x((k+1)h)=\Phi x(kh)+\Gamma_{0}(\tau_)u(kh)+\Gamma_{1}(\tau)u((k-1)h)
     \label{eq:disys}
 \end{equation}
 Given that $A=0, B=I$ and that $\tau = \tau_{sc}+\tau_{ca}\le h$ we can
 calculate the matrices,
 \begin{align*}
     &\Phi=e^{Ah}=1 \\
-    &\Gamma_{0}(\tau_{k})=\int_{0}^{h-\tau_{k}}e^{As}Bds=I(h-\tau) \\
-    &\Gamma_{1}(\tau_{k})=\int_{h-\tau_{k}}^{h}e^{As}Bds=I\tau
+    &\Gamma_{0}(\tau)=\int_{0}^{h-\tau}e^{As}Bds=I(h-\tau) \\
+    &\Gamma_{1}(\tau)=\int_{h-\tau}^{h}e^{As}Bds=I\tau
 \end{align*}
-Placing that back into the system in equation \ref{eq:disys}
+This, together with equation \ref{eq:u} and the system in equation \ref{eq:disys}
+gives,
 \begin{equation}
   x(kh+\tau)=x(kh)+
   \begin{bmatrix}
-    1 & 0 \\
-    0 & I\tau
+    -IK(h-\tau) & I\tau\\
+    -K & 0
   \end{bmatrix}
   \begin{bmatrix}
     x(kh) \\
     u(kh+\tau)
   \end{bmatrix}
-  +
-  \begin{bmatrix}
-    I\tau \\
-    1
-  \end{bmatrix}
-  u(k)
 \end{equation}
+
+\subsubsection{} % (fold)
+
+Considering the systems denominator of the transfer function on the
+form, 
+\begin{equation}
+    d(z) = z^2+a_1z+a_2,
+\end{equation}
+the system is BIBO stable if the poles,
+\begin{equation}
+  p_1,p_2=-\frac{a_2}{2}\pm \sqrt{\frac{a_1^2-4a_2}{4}}.
+\end{equation}
+This gives us that
+\begin{equation}
+    a_1=-(p_1+p_2)
+    \label{eq:a1}
+\end{equation}
+\begin{equation}
+    a_2=p_1p_2.
+    \label{eq:a2}
+\end{equation}
+For the system to be stable, the poles needs to lie inside the unit
+circle, meaning that,
+\begin{equation}
+    p_1, p_2 < 1.
+\end{equation}
+With equation \ref{eq:a1} and \ref{eq:a2} we can now form the criteria for stabillity,
+\begin{equation}
+    |a_2|=|p_1p_2|=|p_1||p_2|<1
+    \label{eq:a2l}
+\end{equation}
+and for $a_1$
+\begin{equation}
+    |a_1|<1+a_2
+    \label{eq:a1l}
+\end{equation}
+Calculating the eigenvalues of \ref{eq:disys} will give the poles of the
+system, which together with equation \ref{eq:a2} and \ref{eq:a1} give,
+\begin{equation}
+  a_2 = KI\tau
+  \label{eq:a2new}
+\end{equation}
+and
+\begin{equation}
+    a_1 = IKh-IK\tau-1
+    \label{eq:a1new}
+\end{equation}
+Combining equation \ref{eq:a1new} and \ref{eq:a2new} with \ref{eq:a2l}
+and \ref{eq:a1l} and solving for $\tau/h$ will give us that the
+relation,
+\begin{equation}
+  max\left\{\frac{1}{2}-\frac{1}{KIh},0\right\}<\frac{\tau}{h}<min\left\{\frac{1}{KIh},1\right\}.
+\end{equation}
+must be satisfied for stability.
+% subsubsection  (end)
 
 \include{Networkpart}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TASK 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%

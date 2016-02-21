@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.16)  19 FEB 2016 18:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.16)  21 FEB 2016 11:37
 entering extended mode
 **./HW2.tex
 (HW2.tex
@@ -856,11 +856,11 @@ File: fig/ex6542.png Graphic file (type png)
 Package pdftex.def Info: fig/ex6542.png used on input line 232.
 (pdftex.def)             Requested size: 321.89693pt x 185.94139pt.
 
-[11 <./fig/ex6541.png> <./fig/ex6542.png (PNG copy)>] [12]
+[11 <./fig/ex6541.png> <./fig/ex6542.png (PNG copy)>] [12] [13]
 \openout2 = `Networkpart.aux'.
 
- (Networkpart.tex
-<fig/network_delay.png, id=76, 810.02625pt x 400.49625pt>
+
+(Networkpart.tex <fig/network_delay.png, id=80, 810.02625pt x 400.49625pt>
 File: fig/network_delay.png Graphic file (type png)
 
 <use fig/network_delay.png>
@@ -871,59 +871,59 @@ Overfull \hbox (15.01213pt too wide) in paragraph at lines 8--9
  [][] 
  []
 
-) [13
+) [14
 
  <./fig/network_delay.png (PNG copy)>]
-<fig/des1.png, id=81, 532.99126pt x 462.72874pt>
+<fig/des1.png, id=84, 532.99126pt x 462.72874pt>
 File: fig/des1.png Graphic file (type png)
  <use fig/des1.png>
-Package pdftex.def Info: fig/des1.png used on input line 304.
+Package pdftex.def Info: fig/des1.png used on input line 355.
 (pdftex.def)             Requested size: 266.49498pt x 231.3638pt.
 
-<fig/des2.png, id=82, 487.32062pt x 563.60562pt>
+<fig/des2.png, id=85, 487.32062pt x 563.60562pt>
 File: fig/des2.png Graphic file (type png)
  <use fig/des2.png>
-Package pdftex.def Info: fig/des2.png used on input line 324.
+Package pdftex.def Info: fig/des2.png used on input line 375.
 (pdftex.def)             Requested size: 341.1221pt x 394.52124pt.
- [14
+ [15
 
- <./fig/des1.png>] <fig/des3.png, id=87, 567.11874pt x 538.01pt>
+ <./fig/des1.png>] <fig/des3.png, id=90, 567.11874pt x 538.01pt>
 File: fig/des3.png Graphic file (type png)
  <use fig/des3.png>
-Package pdftex.def Info: fig/des3.png used on input line 335.
+Package pdftex.def Info: fig/des3.png used on input line 386.
 (pdftex.def)             Requested size: 283.55867pt x 269.00433pt.
 
-[15 <./fig/des2.png>] [16 <./fig/des3.png>] (HW2.aux (Networkpart.aux))
+[16 <./fig/des2.png>] [17 <./fig/des3.png>] (HW2.aux (Networkpart.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12894 strings out of 493634
- 247211 string characters out of 3141316
- 282939 words of memory out of 3000000
- 16007 multiletter control sequences out of 15000+200000
- 16192 words of font info for 50 fonts, out of 3000000 for 9000
+ 12903 strings out of 493634
+ 247289 string characters out of 3141316
+ 284009 words of memory out of 3000000
+ 16015 multiletter control sequences out of 15000+200000
+ 16968 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,9n,54p,435b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,8n,54p,435b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
 cti1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\ecrm1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
-nappen\ec\dpi600\ecbx1440.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\
-ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\
-fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Lamn\AppData\Local\Mi
-KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW2.pdf (16 pages, 1173035 bytes).
+\dpi600\ecbx1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jk
+nappen\ec\dpi600\ecrm1200.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\fonts\pk\
+ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Lamn\AppData\Local\MiKTeX\2.9\
+fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\Lamn\AppData\Local\Mi
+KTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk> <C:\Users\Lamn\AppData
+\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW2.pdf (17 pages, 1170078 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
+ 306 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
